@@ -1,0 +1,64 @@
+import { useState } from 'react';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import PhotoSlot from '../components/PhotoSlot';
+
+const ITEMS = [
+  { cat: 'WEDDING', name: 'Romantic Garden Wedding' },
+  { cat: 'WEDDING', name: 'Classic Ballroom Wedding' },
+  { cat: 'OUTDOOR', name: 'Botanical Garden Wedding' },
+  { cat: 'OUTDOOR', name: 'Outdoor Garden Party' },
+  { cat: 'CORPORATE', name: 'Corporate Gala Dinner' },
+  { cat: 'CORPORATE', name: 'Company Seminar Dining' },
+  { cat: 'BRAND EVENT', name: 'Brand Launching Event' },
+  { cat: 'PRIVATE', name: 'Private Birthday Party' },
+];
+const CATS = ['ALL', 'WEDDING', 'OUTDOOR', 'CORPORATE', 'BRAND EVENT', 'PRIVATE'];
+
+function Portfolio() {
+  const [active, setActive] = useState('ALL');
+  const visible = active === 'ALL' ? ITEMS : ITEMS.filter((i) => i.cat === active);
+
+  return (
+    <>
+      <Header />
+      <section className="page-hero">
+        <div className="wrap">
+          <div className="eyebrow">PORTFOLIO</div>
+          <h1>우리가 새긴<br />기억의 조각들.</h1>
+          <p>베뉴의 결과 두 사람의 선택, 그리고 그날의 이야기를 식탁 위에 새깁니다.</p>
+        </div>
+      </section>
+
+      <section style={{ paddingTop: 0 }}>
+        <div className="wrap">
+          <div className="tabs">
+            {CATS.map((c) => (
+              <button
+                key={c}
+                className={`tab-btn${active === c ? ' active' : ''}`}
+                onClick={() => setActive(c)}
+              >
+                {c}
+              </button>
+            ))}
+          </div>
+          <div className="grid-4">
+            {visible.map((item) => (
+              <div className="cell" key={item.name}>
+                <PhotoSlot caption={item.name} ratio="4/3" />
+                <div style={{ padding: '16px 4px' }}>
+                  <div style={{ fontSize: 12, color: 'var(--sage)', marginBottom: 4 }}>{item.cat}</div>
+                  <div style={{ fontSize: 14.5, color: 'var(--brown)' }}>{item.name}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <Footer />
+    </>
+  );
+}
+
+export default Portfolio;
