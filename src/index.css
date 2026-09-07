@@ -1039,7 +1039,7 @@ h2.section-title {
 
   font-family: "Gowun Batang", serif;
 
-  font-size: clamp(32px, 3.2vw, 48px);
+  font-size: clamp(32px, 3.2vw, 46px);
 
   font-weight: 400;
 
@@ -1060,10 +1060,11 @@ h2.section-title {
 .qd-copy p {
   max-width: 30em;
 
-  margin-top: 20px;
+  margin-top: 16px;
 
-  font-size: 11px;
+  font-size: 10px;
   line-height: 1.8;
+  color: rgba(247, 245, 243, 0.75);
 }
 
 .qd-form {
