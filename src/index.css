@@ -1,19 +1,20 @@
 /* ===== ARO React 전역 스타일 ===== */
-@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Noto+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500;600&family=Noto+Serif+KR:wght@300;400;500;600&display=swap");
 
 :root {
-  --ivory: #faf7f1;
-  --ivory-deep: #f3eee5;
-  --sage: #a8b5a0;
-  --sage-soft: #cbd3c5;
-  --terracotta: #c4896a;
-  --terracotta-soft: #e2c9b8;
-  --gray: #aaa39b;
-  --brown: #3d3530;
-  --brown-soft: #716861;
-  --line: rgba(61, 53, 48, 0.13);
+  /* ARO NEW COLOR SYSTEM */
+  --ivory: #f7f5f3; /* ARO WHITE */
+  --ivory-deep: #ebe8e4; /* TEXTURE OFF-WHITE */
+  --sage: #b7b8b9; /* MATTE SILVER */
+  --sage-soft: #d5d6d7; /* LIGHT SILVER */
+  --terracotta: #b7b8b9; /* POINT */
+  --terracotta-soft: #d5d6d7;
+  --gray: #96999d;
+  --brown: #303336; /* MAIN TEXT */
+  --brown-soft: #65686d; /* SUB TEXT */
+  --line: rgba(48, 51, 54, 0.14);
 
-  --serif: "Instrument Serif", "Noto Serif KR", serif;
+  --serif: "Cormorant Garamond", "Noto Serif KR", serif;
   --sans:
     "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Malgun Gothic", sans-serif;
@@ -320,7 +321,7 @@ h2.section-title {
       rgba(61, 53, 48, 0.05) 0 2px,
       transparent 2px 14px
     ),
-    linear-gradient(160deg, #e7e0d0 0%, #d9cfba 55%, #c7b89c 100%);
+    linear-gradient(160deg, #f1efec 0%, #e5e3e0 55%, #d3d4d5 100%);
   display: flex;
   align-items: flex-end;
 }
@@ -385,30 +386,30 @@ h2.section-title {
 
 /* =========================
    FOOTER
+   COOL GRAY / COMPACT
 ========================= */
 
 footer.site-footer {
-  background: #a8b5a0;
-  color: #3d3530;
-  padding: 40px 0;
-  margin-top: 80px;
+  background: #7b8088;
+  color: #f7f5f3;
+  padding: 20px 0;
+  margin-top: 40px;
 }
 
 .footer-inner {
   width: calc(100% - 80px);
   max-width: 1280px;
   margin: 0 auto;
-  padding: 40px 44px 22px;
-
-  background: #a8b5a0;
+  padding: 20px 34px 12px;
+  background: #7b8088;
 }
 
 .foot-grid {
   display: grid;
   grid-template-columns: 1.5fr 0.9fr 0.9fr 1fr;
-  gap: 70px;
-  padding-bottom: 46px;
-  border-bottom: 1px solid rgba(245, 240, 232, 0.16);
+  gap: 38px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid rgba(247, 245, 243, 0.28);
 }
 
 .footer-brand {
@@ -417,29 +418,29 @@ footer.site-footer {
 
 .footer-logo-img {
   display: inline-block;
-  margin-bottom: 18px;
+  margin-bottom: 8px;
 }
 
 .footer-logo-img img {
-  width: 88px;
+  width: 66px;
   height: auto;
   display: block;
-  filter: none;
-  opacity: 1;
+  filter: brightness(0) invert(1);
+  opacity: 0.96;
 }
 
 .footer-brand p {
-  max-width: 290px;
-  font-size: 12px;
-  line-height: 1.9;
-  color: #3d3530;
+  max-width: 250px;
+  font-size: 10px;
+  line-height: 1.65;
+  color: rgba(247, 245, 243, 0.82);
 }
 
 .foot-grid h5 {
-  margin-bottom: 14px;
-  font-size: 11px;
+  margin-bottom: 7px;
+  font-size: 9px;
   font-weight: 500;
-  color: #3d3530;
+  color: #f7f5f3;
 }
 
 .foot-grid ul {
@@ -449,9 +450,9 @@ footer.site-footer {
 }
 
 .foot-grid li {
-  margin-bottom: 9px;
-  font-size: 12px;
-  color: #3d3530;
+  margin-bottom: 5px;
+  font-size: 10px;
+  color: rgba(247, 245, 243, 0.86);
 }
 
 .foot-grid a {
@@ -468,16 +469,15 @@ footer.site-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  padding-top: 20px;
-  font-size: 11px;
-  color: #3d3530;
+  gap: 16px;
+  padding-top: 10px;
+  font-size: 9px;
+  color: rgba(247, 245, 243, 0.75);
 }
 
 .footer-bottom a {
-  color: #3d3530;
+  color: rgba(247, 245, 243, 0.8);
   text-decoration: none;
-  transition: opacity 0.3s ease;
 }
 
 .footer-bottom a:hover {
@@ -486,18 +486,19 @@ footer.site-footer {
 
 @media (max-width: 800px) {
   footer.site-footer {
-    padding: 24px 0;
-    margin-top: 56px;
+    padding: 20px 0;
+    margin-top: 42px;
   }
 
   .footer-inner {
     width: calc(100% - 28px);
-    padding: 32px 24px 20px;
+    padding: 24px 22px 16px;
   }
 
   .foot-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 34px 28px;
+    gap: 28px 24px;
+    padding-bottom: 24px;
   }
 
   .footer-bottom {
@@ -512,7 +513,7 @@ footer.site-footer {
   }
 
   .footer-logo-img img {
-    width: 76px;
+    width: 68px;
   }
 }
 
@@ -613,23 +614,23 @@ footer.site-footer {
   color: rgba(255, 255, 255, 0.9);
 }
 .swatch.sw1 {
-  background: #f5f0e8;
+  background: #f7f5f3;
   border: 1px solid var(--line);
 }
 .swatch.sw1 span {
   color: var(--brown-soft);
 }
 .swatch.sw2 {
-  background: #8b9a82;
+  background: #ebe8e4;
 }
 .swatch.sw3 {
-  background: #b97a54;
+  background: #b7b8b9;
 }
 .swatch.sw4 {
-  background: #9e9890;
+  background: #7b8088;
 }
 .swatch.sw5 {
-  background: #3d3530;
+  background: #303336;
 }
 
 /* ---- process ---- */
@@ -785,7 +786,7 @@ form.inquiry {
 /* ===== 홈 전용 - 에디토리얼(Catered) 스타일 ===== */
 .accent-italic {
   font-style: italic;
-  color: var(--terracotta);
+  color: #8f9398;
   font-weight: 400;
 }
 
@@ -821,7 +822,7 @@ form.inquiry {
   max-width: 1300px;
   margin: 0 auto;
 
-  background: #fcfaf6;
+  background: var(--ivory);
 
   border-radius: 22px;
   border: 1px solid rgba(61, 53, 48, 0.05);
@@ -944,222 +945,146 @@ form.inquiry {
 
 /* =========================================
    ARO INGREDIENT MARQUEE
+   OFF-WHITE / 30% COMPACT
 ========================================= */
 
 .ingredient-marquee {
   width: 100%;
-  height: 230px;
-
+  height: 120px;
   overflow: hidden;
-
   display: flex;
   align-items: center;
-
-  background: #a8b5a0;
-
-  border-top: 1px solid rgba(245, 240, 232, 0.35);
-  border-bottom: 1px solid rgba(245, 240, 232, 0.35);
+  background: #ebe8e4;
+  border-top: 1px solid rgba(48, 51, 54, 0.1);
+  border-bottom: 1px solid rgba(48, 51, 54, 0.1);
 }
-
-/* 실제로 움직이는 긴 줄 */
 
 .ingredient-track {
   display: flex;
   align-items: center;
-
   width: max-content;
-
   will-change: transform;
-
   animation: ingredientMove 36s linear infinite;
 }
 
-/* 한 묶음 */
-
 .ingredient-group {
   flex-shrink: 0;
-
   display: flex;
   align-items: center;
-
-  gap: 42px;
-
-  padding-right: 42px;
-
+  gap: 22px;
+  padding-right: 22px;
   white-space: nowrap;
 }
 
-/* 서비스 글씨 */
-
 .service-text {
   font-family: var(--serif);
-
-  font-size: clamp(38px, 4vw, 64px);
-
-  font-weight: 400;
-
+  font-size: clamp(24px, 2.4vw, 36px);
+  font-weight: 500;
   line-height: 1;
-
-  color: #f5f0e8;
+  color: #303336;
 }
-
-/* 점 / 별 */
 
 .ingredient-dot {
   flex-shrink: 0;
-
   font-family: var(--serif);
-
-  font-size: 24px;
-
-  color: #c4896a;
+  font-size: 13px;
+  color: #b7b8b9;
 }
-
-/* =========================================
-   원물 이미지 공통
-========================================= */
 
 .ingredient {
   display: block;
-
   flex-shrink: 0;
-
   width: auto;
-
   object-fit: contain;
-
   background: transparent;
-
   border: none;
-
   border-radius: 0;
-
   box-shadow: none;
-
   padding: 0;
-
   margin: 0;
-
   user-select: none;
-
   pointer-events: none;
-
   transform-origin: center;
 }
 
-/* 아스파라거스 */
-
 .ingredient-asparagus {
-  height: 165px;
-
+  height: 86px;
   transform: rotate(-8deg);
 }
 
-/* 허브 */
-
 .ingredient-herb {
-  height: 155px;
-
+  height: 80px;
   transform: rotate(5deg);
 }
 
-/* 옥수수 */
-
 .ingredient-corn {
-  height: 195px;
-
+  height: 100px;
   transform: rotate(-5deg);
 }
 
-/* 토마토 */
-
 .ingredient-tomato {
-  height: 145px;
-
+  height: 76px;
   transform: rotate(4deg);
 }
 
-/* 당근 */
-
 .ingredient-carrot {
-  height: 180px;
-
+  height: 92px;
   transform: rotate(8deg);
 }
 
-/* 브로콜리 */
-
 .ingredient-broccoli {
-  height: 150px;
-
+  height: 78px;
   transform: rotate(-5deg);
 }
-
-/* =========================================
-   무한 이동
-========================================= */
 
 @keyframes ingredientMove {
   from {
     transform: translateX(0);
   }
-
   to {
     transform: translateX(-50%);
   }
 }
 
-/* 마우스를 올리면 정지 */
-
 .ingredient-marquee:hover .ingredient-track {
   animation-play-state: paused;
 }
 
-/* =========================================
-   MOBILE
-========================================= */
-
 @media (max-width: 720px) {
   .ingredient-marquee {
-    height: 150px;
+    height: 110px;
   }
 
   .ingredient-group {
-    gap: 25px;
-
-    padding-right: 25px;
+    gap: 20px;
+    padding-right: 20px;
   }
 
   .service-text {
-    font-size: 36px;
+    font-size: 29px;
   }
 
   .ingredient-dot {
-    font-size: 18px;
+    font-size: 14px;
   }
 
   .ingredient-asparagus {
-    height: 105px;
+    height: 73px;
   }
-
   .ingredient-herb {
-    height: 100px;
+    height: 70px;
   }
-
   .ingredient-corn {
-    height: 125px;
+    height: 88px;
   }
-
   .ingredient-tomato {
-    height: 95px;
+    height: 67px;
   }
-
   .ingredient-carrot {
-    height: 115px;
+    height: 80px;
   }
-
   .ingredient-broccoli {
-    height: 100px;
+    height: 70px;
   }
 }
 

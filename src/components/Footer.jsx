@@ -8,7 +8,10 @@ function Footer() {
           {/* BRAND */}
           <div className="footer-brand">
             <Link to="/" className="footer-logo-img">
-              <img src="/images/aro-logo.png" alt="ARO" />
+              <img
+                src={`${process.env.PUBLIC_URL}/images/aro-logo.png`}
+                alt="ARO"
+              />
             </Link>
 
             <p>

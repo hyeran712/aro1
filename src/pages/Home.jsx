@@ -57,14 +57,13 @@ function Home() {
 
             <div className="hc-visual">
               <img
-                src="/images/main/food1.jpg"
+                src={`${process.env.PUBLIC_URL}/images/main/food1.jpg`}
                 alt="ARO plating"
                 className="hero-main-img"
               />
-
               <div className="inset">
                 <img
-                  src="/images/main/food2.jpg"
+                  src={`${process.env.PUBLIC_URL}/images/main/food2.jpg`}
                   alt="ARO main dish"
                   className="hero-inset-img"
                 />
@@ -82,17 +81,15 @@ function Home() {
           {/* 1번째 세트 */}
           <div className="ingredient-group">
             <img
-              src="/images/ingredients/asparagus.png"
+              src={`${process.env.PUBLIC_URL}/images/ingredients/asparagus.png`}
               alt="Asparagus"
               className="ingredient ingredient-asparagus"
             />
-
             <span className="service-text">Weddings</span>
 
             <span className="ingredient-dot">•</span>
-
             <img
-              src="/images/ingredients/herb.png"
+              src={`${process.env.PUBLIC_URL}/images/ingredients/herb.png`}
               alt="Herb"
               className="ingredient ingredient-herb"
             />
@@ -102,8 +99,8 @@ function Home() {
             <span className="ingredient-dot">✦</span>
 
             <img
-              src="/images/ingredients/corn.png"
-              alt="Corn"
+              src={`${process.env.PUBLIC_URL}/images/ingredients/corn.png`}
+              alt="corn"
               className="ingredient ingredient-corn"
             />
 
@@ -112,8 +109,8 @@ function Home() {
             <span className="ingredient-dot">•</span>
 
             <img
-              src="/images/ingredients/tomato.png"
-              alt="Tomato"
+              src={`${process.env.PUBLIC_URL}/images/ingredients/tomato.png`}
+              alt="tomato"
               className="ingredient ingredient-tomato"
             />
 
@@ -122,8 +119,8 @@ function Home() {
             <span className="ingredient-dot">✦</span>
 
             <img
-              src="/images/ingredients/carrot.png"
-              alt="Carrot"
+              src={`${process.env.PUBLIC_URL}/images/ingredients/carrot.png`}
+              alt="carrot"
               className="ingredient ingredient-carrot"
             />
 
@@ -132,11 +129,10 @@ function Home() {
             <span className="ingredient-dot">•</span>
 
             <img
-              src="/images/ingredients/broccoli.png"
-              alt="Broccoli"
+              src={`${process.env.PUBLIC_URL}/images/ingredients/broccoli.png`}
+              alt="broccoli"
               className="ingredient ingredient-broccoli"
             />
-
             <span className="service-text">Film &amp; Press</span>
 
             <span className="ingredient-dot">✦</span>
@@ -145,7 +141,7 @@ function Home() {
           {/* 2번째 세트 - 무한 반복용 */}
           <div className="ingredient-group" aria-hidden="true">
             <img
-              src="/images/ingredients/asparagus.png"
+              src={`${process.env.PUBLIC_URL}/images/ingredients/asparagus.png`}
               alt=""
               className="ingredient ingredient-asparagus"
             />
@@ -155,18 +151,17 @@ function Home() {
             <span className="ingredient-dot">•</span>
 
             <img
-              src="/images/ingredients/herb.png"
-              alt=""
+              src={`${process.env.PUBLIC_URL}/images/ingredients/herb.png`}
+              alt="herb"
               className="ingredient ingredient-herb"
             />
-
             <span className="service-text">Outdoor Weddings</span>
 
             <span className="ingredient-dot">✦</span>
 
             <img
-              src="/images/ingredients/corn.png"
-              alt=""
+              src={`${process.env.PUBLIC_URL}/images/ingredients/corn.png`}
+              alt="corn"
               className="ingredient ingredient-corn"
             />
 
@@ -175,7 +170,7 @@ function Home() {
             <span className="ingredient-dot">•</span>
 
             <img
-              src="/images/ingredients/tomato.png"
+              src={`${process.env.PUBLIC_URL}/images/ingredients/tomato.png`}
               alt=""
               className="ingredient ingredient-tomato"
             />
@@ -185,17 +180,16 @@ function Home() {
             <span className="ingredient-dot">✦</span>
 
             <img
-              src="/images/ingredients/carrot.png"
+              src={`${process.env.PUBLIC_URL}/images/ingredients/carrot.png`}
               alt=""
               className="ingredient ingredient-carrot"
             />
-
             <span className="service-text">Private Dining</span>
 
             <span className="ingredient-dot">•</span>
 
             <img
-              src="/images/ingredients/broccoli.png"
+              src={`${process.env.PUBLIC_URL}/images/ingredients/broccoli.png`}
               alt=""
               className="ingredient ingredient-broccoli"
             />

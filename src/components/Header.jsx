@@ -18,7 +18,10 @@ function Header() {
       <div className="header-inner">
         {/* LOGO */}
         <Link to="/" className="logo" onClick={closeMenu}>
-          <img src="/images/aro-logo.png" alt="ARO" />
+          <img
+            src={`${process.env.PUBLIC_URL}/images/aro-logo.png`}
+            alt="ARO"
+          />
         </Link>
 
         {/* MENU */}
