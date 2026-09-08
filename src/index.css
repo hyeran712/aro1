@@ -1012,14 +1012,12 @@ h2.section-title {
   width: calc(100% - 56px);
   max-width: 1320px;
 
-  margin: 0 auto;
+  margin: 70px auto 0;
 
   padding: 68px 60px;
 
   background: var(--brown);
   color: var(--ivory);
-
-  border-radius: 0;
 }
 
 .quote-dark-grid {
