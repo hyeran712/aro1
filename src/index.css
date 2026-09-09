@@ -395,7 +395,7 @@ h2.about-team-title {
 
 .hero-title-ko {
   font-family: "Gowun Batang", serif;
-  font-size: clamp(24px, 2.6vw, 38px);
+  font-size: clamp(26px, 3vw, 46px);
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: -0.04em;
@@ -735,12 +735,12 @@ h2.about-team-title {
 
 .services-heading h2 {
   font-family: var(--serif);
-  font-size: clamp(46px, 5vw, 70px);
+  font-size: clamp(42px, 4.7vw, 62px);
   font-weight: 400;
-  font-style: italic;
-  line-height: 1;
-
-  color: #8f9398;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: -0.045em;
+  color: #303336;
 }
 
 .services-heading .editorial-link {
@@ -1765,6 +1765,11 @@ form.inquiry {
   color: #303336;
 }
 
+.menu-hero h1,
+.service-page-hero h1,
+.gallery-page-hero h1,
+.process-page-hero h1,
+.journal-page-hero h1,
 .about-page-hero h1 {
   max-width: none;
   font-size: clamp(20px, 2.5vw, 34px);

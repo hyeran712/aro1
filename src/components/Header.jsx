@@ -43,8 +43,8 @@ function Header() {
           </Link>
 
           <Link
-            to="/portfolio"
-            className={isActive("/portfolio")}
+            to="/gallery"
+            className={isActive("/gallery")}
             onClick={closeMenu}
           >
             GALLERY
@@ -100,7 +100,7 @@ function Header() {
       >
         {[
           ['/service', 'SERVICE'],
-          ['/portfolio', 'GALLERY'],
+          ['/gallery', 'GALLERY'],
           ['/about', 'ABOUT'],
           ['/contact', 'CONTACT'],
         ].map(([path, label]) => (

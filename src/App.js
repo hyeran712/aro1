@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Service from './pages/Service';
-import Portfolio from './pages/Portfolio';
+import Gallery from './pages/Gallery';
 import Menu from './pages/Menu';
 import Process from './pages/Process';
 import Journal from './pages/Journal';
@@ -14,7 +14,7 @@ function App() {
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/service" element={<Service />} />
-      <Route path="/portfolio" element={<Portfolio />} />
+      <Route path="/gallery" element={<Gallery />} />
       <Route path="/menu" element={<Menu />} />
       <Route path="/process" element={<Process />} />
       <Route path="/journal" element={<Journal />} />
