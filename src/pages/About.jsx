@@ -5,10 +5,10 @@ function About() {
   return (
     <>
       <Header />
-      <section className="page-hero">
+      <section className="about-page-hero">
         <div className="wrap">
-          <div className="eyebrow">ABOUT</div>
-          <h1>새긴다는 건 들여다보고,<br />거기에 맞춰 그어내는 일입니다.</h1>
+          <div className="label">ABOUT</div>
+          <h1>ARO는 ‘아로새기다’에서 시작했습니다.<br />좋은 순간을 오래 기억에 남긴다는 뜻입니다.</h1>
           <p>순우리말 '아로새기다'에서 온 이름. 또렷하게 마음에 새겨 두다, 라는 뜻입니다.</p>
         </div>
       </section>
@@ -98,10 +98,11 @@ function About() {
 
       <section style={{ background: 'var(--ivory-deep)' }}>
         <div className="wrap">
-          <div className="label">팀 소개</div>
-          <h2 className="section-title">안주림 그룹, 일상이 특별해지는<br />맛과 브랜드를 만듭니다.</h2>
-          <p style={{ marginTop: 20, fontSize: 15, color: 'var(--brown-soft)', maxWidth: '36em' }}>
-            ARO는 안주림 그룹의 웨딩 · 행사 케이터링 브랜드입니다. 팀 소개 콘텐츠는 준비 중입니다.
+          <h2 className="section-title about-team-title">일상에 오래 남는 경험을 만듭니다.</h2>
+          <p style={{ marginTop: 20, fontSize: 13, color: 'var(--brown-soft)', wordBreak: 'keep-all' }}>
+            맛과 공간, 사람의 취향이
+            <br />
+            자연스럽게 이어지도록 고민합니다.
           </p>
         </div>
       </section>

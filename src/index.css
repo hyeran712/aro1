@@ -1,8 +1,8 @@
 /* =========================================================
-   ARO GLOBAL STYLE
+  ARO GLOBAL STYLE
    Premium editorial catering website
 ========================================================= */
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Gowun+Batang:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Gowun+Batang:wght@400;700&family=Noto+Serif+KR:wght@400;500;600&display=swap");
 
 :root {
   --ivory: #f7f5f3;
@@ -283,6 +283,13 @@ h2.section-title {
 
   color: var(--brown);
 }
+h2.about-team-title {
+  max-width: none;
+  font-size: clamp(20px, 2.2vw, 30px);
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
 /* FAQ 제목 전용 */
 
 .home-faq .section-title {
@@ -337,7 +344,7 @@ h2.section-title {
 ========================================================= */
 
 .top-band {
-  height: 26px;
+  height: 16px;
   margin-top: 82px;
 
   background: var(--ivory);
@@ -346,7 +353,7 @@ h2.section-title {
 }
 
 .hero-card-wrap {
-  padding: 35px 40px 0;
+  padding: 20px 40px 20px;
 }
 
 .hero-card {
@@ -371,7 +378,7 @@ h2.section-title {
 
   gap: 70px;
 
-  padding: 58px 48px;
+  padding: 50px 48px;
 }
 
 .hc-eyebrow-row {
@@ -386,16 +393,48 @@ h2.section-title {
   color: var(--brown-soft);
 }
 
-.hc-headline {
-  margin-bottom: 34px;
-
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(58px, 6vw, 88px);
+.hero-title-ko {
+  font-family: "Gowun Batang", serif;
+  font-size: clamp(24px, 2.6vw, 38px);
   font-weight: 400;
-  line-height: 0.92;
-  letter-spacing: -0.025em;
+  line-height: 1.4;
+  letter-spacing: -0.04em;
+  color: #303336;
+  margin: 0 0 24px;
+  white-space: nowrap;
+}
 
-  color: var(--brown);
+.hero-desc-ko {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #777;
+  margin: 0 0 34px;
+}
+
+.hero-about-copy {
+  margin-top: 34px;
+}
+
+.hero-about-copy p:first-child {
+  font-family: "Gowun Batang", serif;
+  font-size: clamp(42px, 4.7vw, 62px);
+  font-weight: 400;
+  line-height: 1.35;
+  letter-spacing: -0.045em;
+  color: #303336;
+  margin: 0 0 24px;
+}
+
+.hero-about-copy p:last-child {
+  font-family: "Gowun Batang", serif;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #777;
+  margin: 0;
+}
+
+.hero-about-copy + .hc-btn-row {
+  margin-top: 30px;
 }
 
 .hc-meta-row {
@@ -1673,13 +1712,25 @@ form.inquiry {
 .service-page-hero,
 .gallery-page-hero,
 .process-page-hero,
-.journal-page-hero {
+.journal-page-hero,
+.about-page-hero {
   padding: 150px 0 90px;
 
   background: var(--ivory);
 
   border-top: none;
   border-bottom: 1px solid var(--line);
+}
+
+.about-page-hero {
+  margin-top: 84px;
+  padding: 90px 0;
+}
+
+@media (max-width: 1000px) {
+  .about-page-hero {
+    margin-top: 74px;
+  }
 }
 
 .menu-hero.label {
@@ -1697,7 +1748,8 @@ form.inquiry {
 .service-page-hero h1,
 .gallery-page-hero h1,
 .process-page-hero h1,
-.journal-page-hero h1 {
+.journal-page-hero h1,
+.about-page-hero h1 {
   max-width: 15em;
 
   font-family: "MaruBuri", serif;
@@ -1713,11 +1765,19 @@ form.inquiry {
   color: #303336;
 }
 
+.about-page-hero h1 {
+  max-width: none;
+  font-size: clamp(20px, 2.5vw, 34px);
+  line-height: 1.5;
+  word-break: keep-all;
+}
+
 .menu-hero p,
 .service-page-hero p,
 .gallery-page-hero p,
 .process-page-hero p,
-.journal-page-hero p {
+.journal-page-hero p,
+.about-page-hero p {
   max-width: 36em;
 
   margin-top: 24px;
@@ -1921,6 +1981,10 @@ form.inquiry {
   .process-page-hero,
   .journal-page-hero {
     padding: 120px 0 70px;
+  }
+
+  .about-page-hero {
+    padding: 70px 0;
   }
 
   .menu-hero h1,

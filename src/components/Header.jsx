@@ -71,11 +71,6 @@ function Header() {
         <div className="header-actions">
           <span className="est">EST. 2026</span>
 
-          <Link to="/contact" className="inquiry-btn" onClick={closeMenu}>
-            REQUEST A QUOTE
-            <span>→</span>
-          </Link>
-
           {/* MOBILE MENU */}
           <button
             className="menu-toggle"

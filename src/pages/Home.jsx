@@ -23,35 +23,16 @@ function Home() {
             <div className="hero-copy">
               <div className="hc-eyebrow-row">
                 <span>ARO · CATERING &amp; EVENTS</span>
-                <span>SEOUL · EST. 2026</span>
               </div>
 
-              <h1 className="hc-headline">
-                A table,
+              <h1 className="hero-title-ko">
+                ARO는 ‘아로새기다’에서
                 <br />
-                <span className="accent-italic">thoughtfully set.</span>
+                시작했습니다.
               </h1>
-
-              <div className="hc-meta-row">
-                <div>
-                  <div className="m-label">— CRAFT</div>
-
-                  <div className="m-text">
-                    베뉴와 사람의 선택을 음식으로 옮깁니다.
-                  </div>
-                </div>
-
-                <div>
-                  <div className="m-label">— APPROACH</div>
-
-                  <div className="m-text">
-                    Listen. Read. Set.
-                    <br />
-                    그리고 기억에 새깁니다.
-                  </div>
-                </div>
-              </div>
-
+              <p className="hero-desc-ko">
+                좋은 순간을 오래 기억에 남긴다는 뜻입니다.
+              </p>
               <div className="hc-btn-row">
                 <Link className="pill-btn" to="/contact">
                   REQUEST A QUOTE →
