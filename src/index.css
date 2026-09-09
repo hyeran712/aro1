@@ -2,7 +2,6 @@
    ARO GLOBAL STYLE
    Premium editorial catering website
 ========================================================= */
-
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Gowun+Batang:wght@400;700&display=swap");
 
 :root {
@@ -559,180 +558,92 @@ h2.section-title {
   color: var(--brown-soft);
 }
 
-/* =========================================================
-  INGREDIENT MARQUEE
-========================================================= */
+/* =========================
+   SERVICE BANDS
+========================= */
 
-.ingredient-marquee {
+.service-bands {
   width: 100%;
-  height: 120px;
-
-  margin-top: 34px;
-
+  padding: 22px 0;
+  background: #f6f4f1;
+  border-top: 1px solid #d8d3cb;
+  border-bottom: 1px solid #d8d3cb;
   overflow: hidden;
-
-  display: flex;
-  align-items: center;
-
-  background: var(--ivory-deep);
-
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
 }
 
-.ingredient-track {
-  display: flex;
-  align-items: center;
-
-  width: max-content;
-
-  will-change: transform;
-
-  animation: ingredientMove 36s linear infinite;
-}
-
-.ingredient-group {
-  flex-shrink: 0;
-
-  display: flex;
-  align-items: center;
-
-  gap: 22px;
-  padding-right: 22px;
-
+.service-band {
+  overflow: hidden;
   white-space: nowrap;
+  border-top: 1px solid #d8d3cb;
+  border-bottom: 1px solid #d8d3cb;
 }
 
-.service-text {
-  font-family: var(--serif);
-  font-size: clamp(24px, 2.4vw, 36px);
-  font-weight: 500;
-  line-height: 1;
-
-  color: var(--brown);
+.service-band-track {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  animation: marqueeLeft 28s linear infinite;
 }
 
-.ingredient-dot {
-  flex-shrink: 0;
-
-  font-family: var(--serif);
-  font-size: 13px;
-
-  color: var(--silver);
-}
-
-.ingredient {
-  display: block;
-  flex-shrink: 0;
-
-  width: auto;
-
-  object-fit: contain;
-
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-
-  user-select: none;
-  pointer-events: none;
-
-  transform-origin: center;
-}
-
-.ingredient-asparagus {
-  height: 86px;
-  transform: rotate(-8deg);
-}
-
-.ingredient-herb {
-  height: 80px;
-  transform: rotate(5deg);
-}
-
-.ingredient-corn {
-  height: 100px;
-  transform: rotate(-5deg);
-}
-
-.ingredient-tomato {
-  height: 76px;
-  transform: rotate(4deg);
-}
-
-.ingredient-carrot {
-  height: 92px;
-  transform: rotate(8deg);
-}
-
-.ingredient-broccoli {
+.service-band-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 0 0 auto;
+  min-width: max(100vw, 1346px);
   height: 78px;
-  transform: rotate(-5deg);
+  gap: 36px;
+  padding: 0 14px;
 }
 
-@keyframes ingredientMove {
-  from {
-    transform: translateX(0);
-  }
-
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.ingredient-marquee:hover .ingredient-track {
-  animation-play-state: paused;
-}
-
-/* 과거 텍스트 마퀴 호환 */
-
-.marquee-wrap {
-  width: 100%;
-  overflow: hidden;
-
-  padding: 26px 0;
-
-  background: var(--ivory-deep);
-
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.marquee-track {
-  display: flex;
-  width: max-content;
-
-  animation: marqueeMove 32s linear infinite;
-}
-
-.marquee-content {
-  flex-shrink: 0;
-
+.service-band-item {
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 36px;
+  flex-shrink: 0;
+}
 
-  padding-right: 30px;
-
+.service-band-item span {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 27px;
+  font-weight: 400;
+  color: #303336;
+  line-height: 1;
   white-space: nowrap;
-
-  font-family: var(--serif);
-  font-size: clamp(28px, 3.5vw, 52px);
-
-  color: var(--brown);
 }
 
-.marquee-content .dot {
-  font-size: 0.45em;
-  color: var(--silver);
+.service-band-item img {
+  display: block;
+  width: 48px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
-@keyframes marqueeMove {
-  from {
+.service-band-item .service-band-dot {
+  width: 16px;
+  text-align: center;
+  font-size: 18px;
+  color: #aea38e;
+}
+
+/* 왼쪽으로 흐름 */
+@keyframes marqueeLeft {
+  0% {
     transform: translateX(0);
   }
-
-  to {
+  100% {
     transform: translateX(-50%);
+  }
+}
+
+/* 오른쪽으로 흐름 */
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -1056,7 +967,7 @@ h2.section-title {
 }
 
 .qd-copy p {
-  max-width: 30em;
+  max-width: 38em;
 
   margin-top: 16px;
 
@@ -1562,48 +1473,6 @@ form.inquiry {
     right: 1%;
   }
 
-  .ingredient-marquee {
-    height: 94px;
-    margin-top: 26px;
-  }
-
-  .ingredient-group {
-    gap: 18px;
-    padding-right: 18px;
-  }
-
-  .service-text {
-    font-size: 27px;
-  }
-
-  .ingredient-dot {
-    font-size: 12px;
-  }
-
-  .ingredient-asparagus {
-    height: 65px;
-  }
-
-  .ingredient-herb {
-    height: 60px;
-  }
-
-  .ingredient-corn {
-    height: 76px;
-  }
-
-  .ingredient-tomato {
-    height: 58px;
-  }
-
-  .ingredient-carrot {
-    height: 70px;
-  }
-
-  .ingredient-broccoli {
-    height: 60px;
-  }
-
   .philosophy-editorial {
     padding: 72px 0;
   }
@@ -1718,29 +1587,31 @@ form.inquiry {
   border-bottom: 1px solid var(--line);
 }
 
-.menu-hero .label {
-  margin-bottom: 18px;
+.menu-hero.label {
+  margin-bottom: 14px;
 
-  font-size: 10px;
-  letter-spacing: 0.13em;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
 
-  color: var(--brown-soft);
+  color: #7b8088;
 }
 
 .menu-hero h1 {
-  max-width: 11em;
+  max-width: 15em;
 
-  font-family: "Gowun Batang", serif;
+  font-family: "MaruBuri", serif;
 
-  font-size: clamp(42px, 5vw, 68px);
+  font-size: clamp(32px, 3.5vw, 48px);
 
   font-weight: 400;
 
-  line-height: 1.2;
+  line-height: 1.3;
 
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
 
-  color: var(--brown);
+  color: #303336;
 }
 
 .menu-hero p {

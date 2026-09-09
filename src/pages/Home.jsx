@@ -78,135 +78,62 @@ function Home() {
       {/* =====================================
           INGREDIENT MARQUEE
       ===================================== */}
-      <div className="ingredient-marquee">
-        <div className="ingredient-track">
-          {/* 첫 번째 그룹 */}
-          <div className="ingredient-group">
-            <img
-              src={`${process.env.PUBLIC_URL}/images/ingredients/asparagus.png`}
-              alt="Asparagus"
-              className="ingredient ingredient-asparagus"
-            />
-
-            <span className="service-text">Weddings</span>
-
-            <span className="ingredient-dot">•</span>
-
-            <img
-              src={`${process.env.PUBLIC_URL}/images/ingredients/herb.png`}
-              alt="Herb"
-              className="ingredient ingredient-herb"
-            />
-
-            <span className="service-text">Outdoor Weddings</span>
-
-            <span className="ingredient-dot">✦</span>
-
-            <img
-              src={`${process.env.PUBLIC_URL}/images/ingredients/corn.png`}
-              alt="Corn"
-              className="ingredient ingredient-corn"
-            />
-
-            <span className="service-text">Corporate</span>
-
-            <span className="ingredient-dot">•</span>
-
-            <img
-              src={`${process.env.PUBLIC_URL}/images/ingredients/tomato.png`}
-              alt="Tomato"
-              className="ingredient ingredient-tomato"
-            />
-
-            <span className="service-text">Brand Events</span>
-
-            <span className="ingredient-dot">✦</span>
-
-            <img
-              src={`${process.env.PUBLIC_URL}/images/ingredients/carrot.png`}
-              alt="Carrot"
-              className="ingredient ingredient-carrot"
-            />
-
-            <span className="service-text">Private Dining</span>
-
-            <span className="ingredient-dot">•</span>
-
-            <img
-              src={`${process.env.PUBLIC_URL}/images/ingredients/broccoli.png`}
-              alt="Broccoli"
-              className="ingredient ingredient-broccoli"
-            />
-
-            <span className="service-text">Film &amp; Press</span>
-
-            <span className="ingredient-dot">✦</span>
-          </div>
-
-          {/* 두 번째 그룹 - 무한반복용 */}
-          <div className="ingredient-group" aria-hidden="true">
-            <img
-              src={`${process.env.PUBLIC_URL}/images/ingredients/asparagus.png`}
-              alt=""
-              className="ingredient ingredient-asparagus"
-            />
-
-            <span className="service-text">Weddings</span>
-
-            <span className="ingredient-dot">•</span>
-
-            <img
-              src={`${process.env.PUBLIC_URL}/images/ingredients/herb.png`}
-              alt=""
-              className="ingredient ingredient-herb"
-            />
-
-            <span className="service-text">Outdoor Weddings</span>
-
-            <span className="ingredient-dot">✦</span>
-
-            <img
-              src={`${process.env.PUBLIC_URL}/images/ingredients/corn.png`}
-              alt=""
-              className="ingredient ingredient-corn"
-            />
-
-            <span className="service-text">Corporate</span>
-
-            <span className="ingredient-dot">•</span>
-
-            <img
-              src={`${process.env.PUBLIC_URL}/images/ingredients/tomato.png`}
-              alt=""
-              className="ingredient ingredient-tomato"
-            />
-
-            <span className="service-text">Brand Events</span>
-
-            <span className="ingredient-dot">✦</span>
-
-            <img
-              src={`${process.env.PUBLIC_URL}/images/ingredients/carrot.png`}
-              alt=""
-              className="ingredient ingredient-carrot"
-            />
-
-            <span className="service-text">Private Dining</span>
-
-            <span className="ingredient-dot">•</span>
-
-            <img
-              src={`${process.env.PUBLIC_URL}/images/ingredients/broccoli.png`}
-              alt=""
-              className="ingredient ingredient-broccoli"
-            />
-
-            <span className="service-text">Film &amp; Press</span>
-
-            <span className="ingredient-dot">✦</span>
+      <section className="service-bands" aria-label="Our event services">
+        <div className="service-band">
+          <div className="service-band-track">
+            <div className="service-band-group">
+              <div className="service-band-item">
+                <span>Weddings</span>
+                <img src={`${process.env.PUBLIC_URL}/images/icons/service-leaf-left.svg`} alt="" />
+              </div>
+              <div className="service-band-item">
+                <span>Outdoor Weddings</span>
+                <span className="service-band-dot" aria-hidden="true">&#10020;</span>
+              </div>
+              <div className="service-band-item">
+                <span>Corporate</span>
+                <img src={`${process.env.PUBLIC_URL}/images/icons/service-flowers.svg`} alt="" />
+              </div>
+              <div className="service-band-item">
+                <span>Brand Events</span>
+                <span className="service-band-dot" aria-hidden="true">&#10020;</span>
+              </div>
+              <div className="service-band-item">
+                <span>Private Dining</span>
+                <img src={`${process.env.PUBLIC_URL}/images/icons/service-leaf-right.svg`} alt="" />
+              </div>
+              <div className="service-band-item">
+                <span>Film &amp; Press</span>
+              </div>
+            </div>
+            <div className="service-band-group" aria-hidden="true">
+              <div className="service-band-item">
+                <span>Weddings</span>
+                <img src={`${process.env.PUBLIC_URL}/images/icons/service-leaf-left.svg`} alt="" />
+              </div>
+              <div className="service-band-item">
+                <span>Outdoor Weddings</span>
+                <span className="service-band-dot" aria-hidden="true">&#10020;</span>
+              </div>
+              <div className="service-band-item">
+                <span>Corporate</span>
+                <img src={`${process.env.PUBLIC_URL}/images/icons/service-flowers.svg`} alt="" />
+              </div>
+              <div className="service-band-item">
+                <span>Brand Events</span>
+                <span className="service-band-dot" aria-hidden="true">&#10020;</span>
+              </div>
+              <div className="service-band-item">
+                <span>Private Dining</span>
+                <img src={`${process.env.PUBLIC_URL}/images/icons/service-leaf-right.svg`} alt="" />
+              </div>
+              <div className="service-band-item">
+                <span>Film &amp; Press</span>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* =====================================
           PHILOSOPHY
