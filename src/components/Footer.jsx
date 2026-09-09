@@ -14,10 +14,8 @@ function Footer() {
               />
             </Link>
 
-            <p>
-              베뉴와 부부의 선택을 식탁으로 옮기는 일. 안주림 그룹 — 일상이
-              특별해지는 맛과 브랜드.
-            </p>
+            <p>일생 단 한번, 아로 새겨지는 초대</p>
+            <p>Forever Eatched, Private Only Hospitality</p>
           </div>
 
           {/* ABOUT */}
@@ -55,7 +53,7 @@ function Footer() {
             <h5>CONTACT</h5>
 
             <ul>
-              <li>hello@aro-catering.kr</li>
+              <li>aro@ajl.kr</li>
 
               <li>02-1234-5678</li>
 

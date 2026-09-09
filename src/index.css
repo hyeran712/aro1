@@ -749,6 +749,22 @@ h2.section-title {
   color: var(--brown-soft);
 }
 
+.gallery-filter button {
+  padding: 6px 0;
+  margin-right: 22px;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #8a8a8a;
+}
+
+.gallery-filter button.active {
+  color: #303336;
+  border-bottom: 1px solid #303336;
+}
+
 /* OLD MENU PREVIEW COMPAT */
 
 .menu-heading-row {
@@ -1578,7 +1594,11 @@ form.inquiry {
 
 /* HERO */
 
-.menu-hero {
+.menu-hero,
+.service-page-hero,
+.gallery-page-hero,
+.process-page-hero,
+.journal-page-hero {
   padding: 150px 0 90px;
 
   background: var(--ivory);
@@ -1598,7 +1618,11 @@ form.inquiry {
   color: #7b8088;
 }
 
-.menu-hero h1 {
+.menu-hero h1,
+.service-page-hero h1,
+.gallery-page-hero h1,
+.process-page-hero h1,
+.journal-page-hero h1 {
   max-width: 15em;
 
   font-family: "MaruBuri", serif;
@@ -1614,7 +1638,11 @@ form.inquiry {
   color: #303336;
 }
 
-.menu-hero p {
+.menu-hero p,
+.service-page-hero p,
+.gallery-page-hero p,
+.process-page-hero p,
+.journal-page-hero p {
   max-width: 36em;
 
   margin-top: 24px;
@@ -1812,11 +1840,19 @@ form.inquiry {
 ========================================= */
 
 @media (max-width: 720px) {
-  .menu-hero {
+  .menu-hero,
+  .service-page-hero,
+  .gallery-page-hero,
+  .process-page-hero,
+  .journal-page-hero {
     padding: 120px 0 70px;
   }
 
-  .menu-hero h1 {
+  .menu-hero h1,
+  .service-page-hero h1,
+  .gallery-page-hero h1,
+  .process-page-hero h1,
+  .journal-page-hero h1 {
     font-size: clamp(36px, 10vw, 48px);
   }
 

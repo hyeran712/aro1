@@ -18,9 +18,9 @@ function Process() {
   return (
     <>
       <Header />
-      <section className="page-hero">
+      <section className="process-page-hero">
         <div className="wrap">
-          <div className="eyebrow">PROCESS</div>
+          <div className="label">PROCESS</div>
           <h1>상담부터 진행까지,<br />체계적인 프로세스로 진행합니다.</h1>
           <p>메뉴와 조건이 달라져도 ARO의 4단계는 변하지 않습니다.</p>
         </div>

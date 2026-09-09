@@ -12,9 +12,9 @@ function Journal() {
   return (
     <>
       <Header />
-      <section className="page-hero">
+      <section className="journal-page-hero">
         <div className="wrap">
-          <div className="eyebrow">JOURNAL</div>
+          <div className="label">JOURNAL</div>
           <h1>ARO의 이야기,<br />팀의 생각을 기록합니다.</h1>
           <p>브랜드 스토리, 팀의 아이디어, 그리고 소식을 전합니다.</p>
         </div>

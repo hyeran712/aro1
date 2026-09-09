@@ -16,7 +16,11 @@ function About() {
       <section>
         <div className="wrap about-intro-split">
           <div>
-            <div style={{ fontFamily: 'var(--serif)', fontSize: 'clamp(56px,8vw,100px)', letterSpacing: '.06em', lineHeight: 1 }}>ARO</div>
+            <img
+              src={`${process.env.PUBLIC_URL}/images/aro-logo.png`}
+              alt="ARO"
+              style={{ display: 'block', width: 'clamp(140px, 20vw, 240px)', maxWidth: '100%', height: 'auto' }}
+            />
           </div>
           <div>
             <p style={{ fontSize: 16, color: 'var(--brown-soft)', marginBottom: 20, maxWidth: '36em' }}>

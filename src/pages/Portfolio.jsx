@@ -4,8 +4,14 @@ import Footer from '../components/Footer';
 import PhotoSlot from '../components/PhotoSlot';
 
 const ITEMS = [
-  { cat: 'WEDDING', name: 'Romantic Garden Wedding' },
-  { cat: 'WEDDING', name: 'Classic Ballroom Wedding' },
+  { cat: 'WEDDING', name: 'Romantic Garden Wedding', image: 'wedding-garden-01.png' },
+  { cat: 'WEDDING', name: 'Classic Ballroom Wedding', image: 'wedding-table-01..png' },
+  { cat: 'WEDDING', name: 'Wedding Table', image: 'wedding-table-02.png' },
+  { cat: 'WEDDING', name: 'Wedding Table', image: 'wedding-table-03.png' },
+  { cat: 'WEDDING', name: 'Wedding Table', image: 'wedding-table-04.png' },
+  { cat: 'WEDDING', name: 'Wedding Table', image: 'wedding-table-05.png' },
+  { cat: 'WEDDING', name: 'Wedding Table', image: 'wedding-table-06.png' },
+  { cat: 'WEDDING', name: 'Wedding Table', image: 'wedding-table-07.png' },
   { cat: 'OUTDOOR', name: 'Botanical Garden Wedding' },
   { cat: 'OUTDOOR', name: 'Outdoor Garden Party' },
   { cat: 'CORPORATE', name: 'Corporate Gala Dinner' },
@@ -22,9 +28,9 @@ function Portfolio() {
   return (
     <>
       <Header />
-      <section className="page-hero">
+      <section className="gallery-page-hero">
         <div className="wrap">
-          <div className="eyebrow">PORTFOLIO</div>
+          <div className="label">GALLERY</div>
           <h1>우리가 새긴<br />기억의 조각들.</h1>
           <p>베뉴의 결과 두 사람의 선택, 그리고 그날의 이야기를 식탁 위에 새깁니다.</p>
         </div>
@@ -32,7 +38,7 @@ function Portfolio() {
 
       <section style={{ paddingTop: 0 }}>
         <div className="wrap">
-          <div className="tabs">
+          <div className="tabs gallery-filter">
             {CATS.map((c) => (
               <button
                 key={c}
@@ -45,8 +51,19 @@ function Portfolio() {
           </div>
           <div className="grid-4">
             {visible.map((item) => (
-              <div className="cell" key={item.name}>
-                <PhotoSlot caption={item.name} ratio="4/3" />
+              <div className="cell" key={item.image || item.name}>
+                <PhotoSlot
+                  src={item.image ? `${process.env.PUBLIC_URL}/images/gallery/${item.image}` : undefined}
+                  alt={item.name}
+                  caption={item.name}
+                  ratio="4/3"
+                  style={{
+                    display: 'block',
+                    objectFit: 'contain',
+                    objectPosition: 'center',
+                    backgroundColor: 'var(--ivory-deep)',
+                  }}
+                />
                 <div style={{ padding: '16px 4px' }}>
                   <div style={{ fontSize: 12, color: 'var(--sage)', marginBottom: 4 }}>{item.cat}</div>
                   <div style={{ fontSize: 14.5, color: 'var(--brown)' }}>{item.name}</div>

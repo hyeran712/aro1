@@ -84,23 +84,36 @@ function Home() {
             <div className="service-band-group">
               <div className="service-band-item">
                 <span>Weddings</span>
-                <img src={`${process.env.PUBLIC_URL}/images/icons/service-leaf-left.svg`} alt="" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/icons/service-leaf-left.svg`}
+                  alt=""
+                />
               </div>
               <div className="service-band-item">
                 <span>Outdoor Weddings</span>
-                <span className="service-band-dot" aria-hidden="true">&#10020;</span>
+                <span className="service-band-dot" aria-hidden="true">
+                  &#10020;
+                </span>
               </div>
               <div className="service-band-item">
                 <span>Corporate</span>
-                <img src={`${process.env.PUBLIC_URL}/images/icons/service-flowers.svg`} alt="" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/icons/service-flowers.svg`}
+                  alt=""
+                />
               </div>
               <div className="service-band-item">
                 <span>Brand Events</span>
-                <span className="service-band-dot" aria-hidden="true">&#10020;</span>
+                <span className="service-band-dot" aria-hidden="true">
+                  &#10020;
+                </span>
               </div>
               <div className="service-band-item">
                 <span>Private Dining</span>
-                <img src={`${process.env.PUBLIC_URL}/images/icons/service-leaf-right.svg`} alt="" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/icons/service-leaf-right.svg`}
+                  alt=""
+                />
               </div>
               <div className="service-band-item">
                 <span>Film &amp; Press</span>
@@ -109,23 +122,36 @@ function Home() {
             <div className="service-band-group" aria-hidden="true">
               <div className="service-band-item">
                 <span>Weddings</span>
-                <img src={`${process.env.PUBLIC_URL}/images/icons/service-leaf-left.svg`} alt="" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/icons/service-leaf-left.svg`}
+                  alt=""
+                />
               </div>
               <div className="service-band-item">
                 <span>Outdoor Weddings</span>
-                <span className="service-band-dot" aria-hidden="true">&#10020;</span>
+                <span className="service-band-dot" aria-hidden="true">
+                  &#10020;
+                </span>
               </div>
               <div className="service-band-item">
                 <span>Corporate</span>
-                <img src={`${process.env.PUBLIC_URL}/images/icons/service-flowers.svg`} alt="" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/icons/service-flowers.svg`}
+                  alt=""
+                />
               </div>
               <div className="service-band-item">
                 <span>Brand Events</span>
-                <span className="service-band-dot" aria-hidden="true">&#10020;</span>
+                <span className="service-band-dot" aria-hidden="true">
+                  &#10020;
+                </span>
               </div>
               <div className="service-band-item">
                 <span>Private Dining</span>
-                <img src={`${process.env.PUBLIC_URL}/images/icons/service-leaf-right.svg`} alt="" />
+                <img
+                  src={`${process.env.PUBLIC_URL}/images/icons/service-leaf-right.svg`}
+                  alt=""
+                />
               </div>
               <div className="service-band-item">
                 <span>Film &amp; Press</span>
