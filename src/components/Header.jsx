@@ -25,7 +25,7 @@ function Header() {
         </Link>
 
         {/* MENU */}
-        <nav className={`nav ${menuOpen ? "nav-open" : ""}`}>
+        <nav className="nav">
           <Link to="/about" className={isActive("/about")} onClick={closeMenu}>
             ABOUT
           </Link>
@@ -80,8 +80,10 @@ function Header() {
           <button
             className="menu-toggle"
             type="button"
-            aria-label="메뉴 열기"
-            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? "메뉴 닫기" : "메뉴 열기"}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setMenuOpen((open) => !open)}
           >
             <span></span>
             <span></span>
@@ -89,6 +91,29 @@ function Header() {
           </button>
         </div>
       </div>
+      <nav
+        id="mobile-navigation"
+        className="mobile-navigation"
+        aria-label="모바일 메뉴"
+        hidden={!menuOpen}
+        onKeyDown={(event) => {
+          if (event.key === "Escape") {
+            closeMenu();
+            event.currentTarget.parentElement.querySelector('.menu-toggle').focus();
+          }
+        }}
+      >
+        {[
+          ['/service', 'SERVICE'],
+          ['/portfolio', 'GALLERY'],
+          ['/about', 'ABOUT'],
+          ['/contact', 'CONTACT'],
+        ].map(([path, label]) => (
+          <Link key={path} to={path} className={isActive(path)} onClick={closeMenu}>
+            {label}
+          </Link>
+        ))}
+      </nav>
     </header>
   );
 }

@@ -179,6 +179,11 @@ nav.nav a:hover::after,
   gap: 22px;
 }
 
+.menu-toggle,
+.mobile-navigation {
+  display: none;
+}
+
 .est {
   font-size: 9px;
   letter-spacing: 0.1em;
@@ -1400,6 +1405,76 @@ form.inquiry {
 }
 
 @media (max-width: 800px) {
+  .header-inner {
+    min-height: 72px;
+    padding: 12px 20px;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+  }
+
+  .header .logo img {
+    width: 60px;
+  }
+
+  .header-actions {
+    gap: 12px;
+  }
+
+  .header-actions .inquiry-btn {
+    min-height: 44px;
+    padding: 8px 0;
+    border: 0;
+    background: transparent;
+    color: var(--brown);
+    white-space: nowrap;
+  }
+
+  .header-actions .inquiry-btn span {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .menu-toggle span {
+    width: 22px;
+    height: 1px;
+    background: var(--brown);
+  }
+
+  .mobile-navigation:not([hidden]) {
+    display: flex;
+    flex-direction: column;
+    padding: 12px 24px 20px;
+    border-top: 1px solid var(--line);
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
+  }
+
+  .mobile-navigation a {
+    display: flex;
+    align-items: center;
+    min-height: 48px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    color: var(--brown-soft);
+  }
+
+  .mobile-navigation a.active {
+    color: var(--brown);
+    font-weight: 600;
+  }
+
   nav.nav,
   .aro-nav {
     display: none;
