@@ -1,0 +1,405 @@
+@font-face {
+  font-family: "ARO Handwriting";
+  src: url("../assets/fonts/nanum-pen-script.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+.header.header-home {
+  position: relative;
+  margin-top: 4px;
+  border-top: 1px solid var(--line);
+  background: #f7f5f2;
+}
+
+.header-home .header-inner {
+  max-width: 1440px;
+  min-height: 82px;
+  padding: 10px 40px;
+}
+
+.header-home .logo {
+  width: 52px;
+  height: 36px;
+  overflow: hidden;
+}
+
+.header.header-home .logo img {
+  width: 82px;
+  max-width: none;
+  max-height: none;
+  flex-shrink: 0;
+  margin-left: -15px;
+  mix-blend-mode: multiply;
+}
+
+.header-home nav.nav {
+  gap: 30px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+
+.header-home .est {
+  display: inline;
+}
+
+.occasion-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: min(35.1vw, 740px);
+  padding: 3vw 2vw 3vw max(6vw, calc((100vw - 1440px) / 2 + 40px));
+  border: 0;
+  margin-bottom: 32px;
+  background: #f7f5f2;
+  overflow: hidden;
+}
+
+.occasion-visual {
+  position: absolute;
+  z-index: -2;
+  inset: 0 0 0 36%;
+}
+
+.occasion-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+}
+
+.occasion-hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    #f7f5f2 0%,
+    #f7f5f2 34%,
+    rgba(247, 245, 242, 0.96) 38%,
+    rgba(247, 245, 242, 0.55) 43%,
+    transparent 51%
+  );
+}
+
+.occasion-copy {
+  width: min(100%, 500px);
+}
+
+.occasion-eyebrow {
+  font-size: clamp(10px, 0.65vw, 12px);
+  letter-spacing: 0.38em;
+  margin-bottom: 1.5vw;
+}
+
+.occasion-copy h1 {
+  font-family: "Gowun Batang", "Noto Serif KR", serif;
+  font-size: clamp(28px, 2.35vw, 44px);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: 1.28;
+  white-space: nowrap;
+}
+
+.occasion-description {
+  font-family: "Gowun Batang", serif;
+  font-size: clamp(13px, 0.9vw, 17px);
+  line-height: 1.65;
+  margin-top: 0.85vw;
+  white-space: nowrap;
+}
+
+/* 서비스 아이콘 영역 */
+.occasion-services {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  width: 92%;
+  margin-top: 1.7vw;
+
+  /* 아이콘 5개 전체를 왼쪽으로 이동 */
+  margin-left: -18px;
+
+  padding: 0.65vw 0;
+  border: 0;
+}
+
+.occasion-services li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 0.5vw;
+  padding: 0.3vw 2px 0.65vw;
+  font-size: clamp(9px, 0.68vw, 13px);
+  white-space: nowrap;
+}
+
+.occasion-services li + li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: clamp(18px, 1.5vw, 28px);
+  background: #ded7ce;
+}
+
+/* 서비스 아이콘 크기 */
+.occasion-services svg {
+  width: clamp(18px, 1.5vw, 28px);
+  height: clamp(18px, 1.5vw, 28px);
+  transform: none;
+  transform-origin: center;
+}
+
+.occasion-handwriting {
+  position: absolute;
+  top: 15%;
+  right: 2%;
+  color: #fff9ed;
+  font-family: "ARO Handwriting", cursive;
+  font-size: clamp(25px, 2.2vw, 42px);
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  line-height: 1.4;
+  white-space: nowrap;
+  transform: rotate(-8deg) skewX(-8deg) scaleX(0.88);
+  transform-origin: right center;
+  text-shadow: none;
+}
+
+.occasion-actions {
+  display: flex;
+  gap: 1.2vw;
+  margin-top: 1.8vw;
+}
+
+.occasion-actions a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 1vw 2.25vw;
+  border: 1px solid #303638;
+  background: #303638;
+  color: #fff;
+  font-size: clamp(10px, 0.65vw, 12px);
+  letter-spacing: 0.08em;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.occasion-actions a + a {
+  background: transparent;
+  color: #303638;
+  font-weight: 600;
+}
+
+.occasion-actions a:hover {
+  background: #555c5e;
+  color: white;
+}
+
+.occasion-actions a:focus-visible {
+  outline: 2px solid #303638;
+  outline-offset: 4px;
+}
+
+.occasion-note {
+  position: absolute;
+  right: 2%;
+  top: 11%;
+  color: #fff9ed;
+  text-shadow: 0 2px 12px #493824;
+}
+
+.occasion-note p {
+  font-family: "Nanum Brush Script", cursive;
+  font-size: clamp(26px, 2.5vw, 50px);
+  line-height: 1.35;
+  transform: rotate(-6deg);
+}
+
+.occasion-note > span {
+  display: block;
+  width: fit-content;
+  margin: 3vw 0 0 auto;
+  font-size: clamp(11px, 0.9vw, 18px);
+  letter-spacing: 0.2em;
+  line-height: 1.6;
+}
+
+.occasion-note > span::after {
+  content: "";
+  display: block;
+  width: 85px;
+  height: 1px;
+  background: currentColor;
+  margin-top: 20px;
+}
+
+@media (max-width: 1000px) {
+  .header-home nav.nav {
+    gap: 20px;
+    font-size: 10px;
+  }
+
+  .occasion-hero {
+    padding: 40px 5vw;
+    min-height: 510px;
+  }
+
+  .occasion-copy {
+    width: 58%;
+  }
+
+  .occasion-copy h1 {
+    font-size: clamp(26px, 3.2vw, 32px);
+  }
+
+  .occasion-description {
+    font-size: 13px;
+  }
+
+  .occasion-services {
+    margin-top: 24px;
+    width: 100%;
+    margin-left: -12px;
+  }
+
+  .occasion-services li {
+    padding: 8px 2px;
+  }
+
+  .occasion-services svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .occasion-actions {
+    margin-top: 24px;
+  }
+
+  .occasion-hero::before {
+    background: linear-gradient(
+      90deg,
+      #f7f5f2 25%,
+      rgba(247, 245, 242, 0.97) 42%,
+      transparent 75%
+    );
+  }
+
+  .occasion-note {
+    top: 12%;
+    right: 3%;
+  }
+
+  .occasion-note p {
+    font-size: 27px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header.header-home {
+    margin-top: 4px;
+  }
+
+  .header-home .header-inner {
+    min-height: 68px;
+    padding: 8px 20px;
+  }
+
+  .occasion-hero {
+    display: block;
+    padding: 32px 28px 300px;
+    margin-bottom: 20px;
+  }
+
+  .occasion-copy {
+    width: 100%;
+  }
+
+  .occasion-eyebrow {
+    font-size: 10px;
+    margin-bottom: 20px;
+  }
+
+  .occasion-copy h1 {
+    font-size: clamp(23px, 5.6vw, 32px);
+  }
+
+  .occasion-description {
+    font-size: clamp(11px, 2.8vw, 15px);
+    margin-top: 16px;
+  }
+
+  .occasion-services {
+    margin-top: 24px;
+    padding: 8px 0;
+    margin-left: 0;
+  }
+
+  .occasion-services li {
+    gap: 6px;
+    font-size: clamp(9px, 2.2vw, 11px);
+  }
+
+  .occasion-services svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .occasion-actions {
+    gap: 10px;
+  }
+
+  .occasion-actions a {
+    padding: 14px 10px;
+    flex: 1;
+    font-size: 10px;
+  }
+
+  .occasion-visual {
+    inset: auto 0 0;
+    height: auto;
+    aspect-ratio: 806 / 377;
+  }
+
+  .occasion-handwriting {
+    font-size: clamp(15px, 3.4vw, 22px);
+    right: 2%;
+  }
+
+  .occasion-hero {
+    padding-bottom: calc(46.78vw + 24px);
+  }
+
+  .occasion-hero::before {
+    background: linear-gradient(180deg, #f7f5f2, transparent 35px);
+    inset: auto 0 0;
+    height: auto;
+    aspect-ratio: 806 / 377;
+  }
+
+  .occasion-note {
+    top: auto;
+    bottom: 28px;
+    right: 20px;
+  }
+
+  .occasion-note p {
+    font-size: 27px;
+  }
+
+  .occasion-note > span {
+    display: none;
+  }
+}

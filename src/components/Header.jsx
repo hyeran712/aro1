@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 
-function Header() {
+function Header({ homeHero = false }) {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -14,7 +14,7 @@ function Header() {
   };
 
   return (
-    <header className="header">
+    <header className={`header${homeHero ? " header-home" : ""}`}>
       <div className="header-inner">
         {/* LOGO */}
         <Link to="/" className="logo" onClick={closeMenu}>
@@ -51,19 +51,14 @@ function Header() {
           </Link>
 
           <Link
-            to="/process"
-            className={isActive("/process")}
-            onClick={closeMenu}
-          >
-            PROCESS
-          </Link>
-
-          <Link
             to="/journal"
             className={isActive("/journal")}
             onClick={closeMenu}
           >
             JOURNAL
+          </Link>
+          <Link to="/contact" className={isActive("/contact")} onClick={closeMenu}>
+            CONTACT
           </Link>
         </nav>
 
@@ -99,9 +94,11 @@ function Header() {
         }}
       >
         {[
-          ['/service', 'SERVICE'],
-          ['/gallery', 'GALLERY'],
           ['/about', 'ABOUT'],
+          ['/service', 'SERVICES'],
+          ['/menu', 'MENU'],
+          ['/gallery', 'GALLERY'],
+          ['/journal', 'JOURNAL'],
           ['/contact', 'CONTACT'],
         ].map(([path, label]) => (
           <Link key={path} to={path} className={isActive(path)} onClick={closeMenu}>

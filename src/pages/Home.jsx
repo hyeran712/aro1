@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import OccasionIcon from "../components/OccasionIcon";
+import "./HomeHero.css";
 
 function Home() {
   return (
@@ -9,52 +11,36 @@ function Home() {
       {/* =====================================
           HEADER
       ===================================== */}
-      <Header />
+      <Header homeHero />
 
       {/* =====================================
           HERO
       ===================================== */}
-      <div className="top-band"></div>
-
-      <div className="hero-card-wrap">
-        <div className="hero-card">
-          <div className="hero-card-body">
-            {/* HERO TEXT */}
-            <div className="hero-copy">
-              <div className="hc-eyebrow-row">
-                <span>ARO · CATERING &amp; EVENTS</span>
-              </div>
-
-              <h1 className="hero-title-ko">
-                ARO는 ‘아로새기다’에서
-                <br />
-                시작했습니다.
-              </h1>
-              <p className="hero-desc-ko">
-                좋은 순간을 오래 기억에 남긴다는 뜻입니다.
-              </p>
-              <div className="hc-btn-row">
-                <Link className="pill-btn" to="/contact">
-                  REQUEST A QUOTE →
-                </Link>
-
-                <Link className="pill-btn outline" to="/menu">
-                  VIEW MENU →
-                </Link>
-              </div>
-            </div>
-
-            {/* HERO IMAGE */}
-            <div className="hc-visual">
-              <img
-                src={`${process.env.PUBLIC_URL}/images/main/steak1.png`}
-                alt="ARO plating"
-                className="hero-main-img"
-              />
-            </div>
+      <section className="occasion-hero" aria-labelledby="occasion-title">
+        <div className="occasion-visual">
+          <img src={`${process.env.PUBLIC_URL}/images/main/hero1.png`} alt="꽃과 핑거푸드로 꾸민 ARO 케이터링 테이블" fetchPriority="high" />
+        </div>
+        <div className="occasion-copy">
+          <p className="occasion-eyebrow">FOR EVERY OCCASION</p>
+          <h1 id="occasion-title">모든 특별한 자리를 위한<br />케이터링, ARO</h1>
+          <p className="occasion-description">작은 모임부터 대규모 행사까지,<br />상황에 맞는 최상의 메뉴와 서비스로 함께합니다.</p>
+          <ul className="occasion-services" aria-label="케이터링 서비스">
+            {[
+              ['wedding', '웨딩'],
+              ['outdoor', '야외행사'],
+              ['corporate', '기업행사'],
+              ['brand', '브랜드행사'],
+              ['private', '프라이빗파티'],
+            ].map(([type, label]) => (
+              <li key={type}><OccasionIcon type={type} /><span>{label}</span></li>
+            ))}
+          </ul>
+          <div className="occasion-actions">
+            <Link to="/contact">REQUEST A QUOTE <span aria-hidden="true">→</span></Link>
+            <Link to="/menu">VIEW MENU <span aria-hidden="true">→</span></Link>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* =====================================
           INGREDIENT MARQUEE
