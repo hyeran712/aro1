@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import BrandText from "../components/BrandText";
 
 function Menu() {
   const [activeCategory, setActiveCategory] = useState("ALL");
@@ -123,7 +124,7 @@ function Menu() {
             <h1>
               좋은 재료와 섬세한 조리로
               <br />
-              완성한 ARO의 메뉴입니다.
+              완성한 <BrandText />의 메뉴입니다.
             </h1>
 
             <p>
@@ -162,12 +163,26 @@ function Menu() {
                     index === 0 ? "menu-card-featured" : ""
                   }`}
                 >
-                  <div className="menu-image-wrap">
+                  <div
+                    className="menu-image-wrap"
+                    tabIndex={0}
+                    role="group"
+                    aria-label={item.title}
+                    aria-describedby={`menu-description-${item.id}`}
+                  >
                     <img
                       src={`${process.env.PUBLIC_URL}/images/menu/${item.image}`}
                       alt={item.title}
                       className="menu-image"
                     />
+                    <div className="menu-image-overlay">
+                      <p
+                        id={`menu-description-${item.id}`}
+                        className="menu-image-description"
+                      >
+                        {item.desc}
+                      </p>
+                    </div>
                   </div>
 
                   <div className="menu-card-copy">
@@ -175,7 +190,6 @@ function Menu() {
 
                     <h2>{item.title}</h2>
 
-                    <p>{item.desc}</p>
                   </div>
                 </article>
               ))}

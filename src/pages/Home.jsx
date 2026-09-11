@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import OccasionIcon from "../components/OccasionIcon";
+import BrandText from "../components/BrandText";
 import "./HomeHero.css";
 
 function Home() {
@@ -22,7 +23,7 @@ function Home() {
         </div>
         <div className="occasion-copy">
           <p className="occasion-eyebrow">FOR EVERY OCCASION</p>
-          <h1 id="occasion-title">모든 특별한 자리를 위한<br />케이터링, ARO</h1>
+          <h1 id="occasion-title">모든 특별한 자리를 위한<br />케이터링 <BrandText /></h1>
           <p className="occasion-description">작은 모임부터 대규모 행사까지,<br />상황에 맞는 최상의 메뉴와 서비스로 함께합니다.</p>
           <ul className="occasion-services" aria-label="케이터링 서비스">
             {[
@@ -131,46 +132,39 @@ function Home() {
       {/* =====================================
           PHILOSOPHY
       ===================================== */}
-      <section className="philosophy-editorial">
-        <div className="wrap philosophy-editorial-grid">
-          {/* TEXT */}
-          <div className="philosophy-copy">
-            <div className="label">OUR PHILOSOPHY</div>
-
-            <h2>
-              우리는 식사가
-              <br />
-              하나의 대화라고
-              <br />
-              생각합니다.
-            </h2>
-
-            <p>
-              좋은 식사는 사람과 사람을 이어주고, 특별한 순간을 오래 기억하게
-              합니다. ARO는 음식, 공간, 사람 사이의 대화를 하나의 식탁으로
-              만듭니다.
-            </p>
-
-            <Link className="editorial-link" to="/about">
-              MORE ABOUT ARO →
-            </Link>
+      <section className="philosophy-story" aria-labelledby="philosophy-title">
+        <div className="philosophy-story-inner">
+          <div className="philosophy-story-top">
+            <span>ARO CATERING</span>
+            <img src={`${process.env.PUBLIC_URL}/images/icons/service-leaf-right.svg`} alt="" />
           </div>
-
-          {/* IMAGE */}
-          <div className="philosophy-image-wrap">
-            <img
-              src={`${process.env.PUBLIC_URL}/images/main/table.png`}
-              alt="ARO wedding table"
-              className="philosophy-image"
-            />
-
-            <span className="philosophy-image-caption">
-              DETAILS
-              <br />
-              MAKE
-              <br />
-              SPECIAL DAYS
-            </span>
+          <div className="philosophy-story-grid">
+            <figure className="philosophy-story-photo philosophy-story-tall">
+              <img src={`${process.env.PUBLIC_URL}/images/main/table.png`} alt="꽃과 촛불, ARO 메뉴 카드로 준비한 식탁" loading="lazy" />
+              <figcaption>MORE THAN A MEAL,<br />A MEANINGFUL MOMENT</figcaption>
+            </figure>
+            <div className="philosophy-story-copy">
+              <p className="philosophy-story-eyebrow">OUR PHILOSOPHY</p>
+              <h2 id="philosophy-title">우리는 식사가<br />하나의 대화라고<br />생각합니다.</h2>
+              <div className="philosophy-story-description">
+                <p>좋은 식사는 사람과 사람을 이어주고,<br />특별한 순간을 오래 기억하게 합니다.</p>
+                <p><BrandText />는 음식, 공간, 사람 사이의 대화를 하나의 식탁으로 만듭니다.<br />정성스럽게 준비한 메뉴와 섬세한 서비스로 어떤 자리든 더 깊은 이야기가 흐르는 시간이 되도록 합니다.</p>
+              </div>
+              <Link className="philosophy-story-link" to="/about">MORE ABOUT ARO <span aria-hidden="true">→</span></Link>
+            </div>
+            <div className="philosophy-story-stack">
+              <figure className="philosophy-story-photo">
+                <img src={`${process.env.PUBLIC_URL}/images/main/steak1.png`} alt="요리사가 정성스럽게 완성하는 한 접시" loading="lazy" />
+                <figcaption>THOUGHTFUL<br />FOOD<br />FOR MEANINGFUL<br />PEOPLE</figcaption>
+              </figure>
+              <figure className="philosophy-story-photo">
+                <img src={`${process.env.PUBLIC_URL}/images/main/philosophy-aro-table.png`} alt="올리브 가지와 촛불이 어우러진 다이닝 테이블" loading="lazy" />
+                <figcaption>SAME TABLE<br />BRIGHTER TOMORROWS</figcaption>
+              </figure>
+            </div>
+          </div>
+          <div className="philosophy-story-bottom">
+            <span>EVENTS &nbsp; PEOPLE &nbsp; FOOD &nbsp; | &nbsp; A BRIGHTER TOMORROW</span>
           </div>
         </div>
       </section>
@@ -210,7 +204,7 @@ function Home() {
             {/* SERVICE 02 */}
             <Link to="/service" className="service-editorial-item">
               <img
-                src={`${process.env.PUBLIC_URL}/images/main/table.png`}
+                src={`${process.env.PUBLIC_URL}/images/main/table2.png`}
                 alt="Signature Plan"
               />
 
@@ -324,7 +318,7 @@ function Home() {
 
               <p>
                 <p>
-                  공간, 일정, 인원만 알려주시면 ARO가 어울리는 방향을 함께
+                  공간, 일정, 인원만 알려주시면 <BrandText />가 어울리는 방향을 함께
                   제안드립니다.
                 </p>
               </p>

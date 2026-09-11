@@ -1,6 +1,7 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import PhotoSlot from "../components/PhotoSlot";
+import BrandText from "../components/BrandText";
 
 const POSTS = [
   {
@@ -33,7 +34,7 @@ function Journal() {
           <div className="label">JOURNAL</div>
 
           <h1>
-            ARO의 이야기,
+            <BrandText />의 이야기,
             <br />
             팀의 생각을 기록합니다.
           </h1>
@@ -80,7 +81,7 @@ function Journal() {
                       marginBottom: 8,
                     }}
                   >
-                    {p.title}
+                    <BrandText>{p.title}</BrandText>
                   </div>
 
                   <div

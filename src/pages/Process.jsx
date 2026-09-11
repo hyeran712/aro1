@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import BrandText from '../components/BrandText';
 
 const STEPS = [
   ['베뉴 인터뷰', '베뉴 운영자가 자기 공간의 결과 운영 방식을 알려주는 시간. 가장 공들여 듣는 시간입니다.'],
@@ -22,7 +23,7 @@ function Process() {
         <div className="wrap">
           <div className="label">PROCESS</div>
           <h1>상담부터 진행까지,<br />체계적인 프로세스로 진행합니다.</h1>
-          <p>메뉴와 조건이 달라져도 ARO의 4단계는 변하지 않습니다.</p>
+          <p>메뉴와 조건이 달라져도 <BrandText />의 4단계는 변하지 않습니다.</p>
         </div>
       </section>
 

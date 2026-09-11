@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import PhotoSlot from '../components/PhotoSlot';
+
+const MAP_URL = `https://map.naver.com/p/search/${encodeURIComponent('서울시 중구 충무로 24')}`;
 
 function Contact() {
   const [form, setForm] = useState({ type: '베뉴 파트너십', name: '', contact: '', message: '' });
@@ -21,7 +22,7 @@ function Contact() {
   return (
     <>
       <Header />
-      <section className="page-hero">
+      <section className="page-hero contact-page-hero">
         <div className="wrap">
           <div className="eyebrow">CONTACT</div>
           <h1>궁금한 점이 있으시면<br />언제든 문의해주세요.</h1>
@@ -34,11 +35,12 @@ function Contact() {
           <div>
             <div className="contact-item"><div className="k">PHONE</div><div className="v">02-1234-5678</div></div>
             <div className="contact-item"><div className="k">EMAIL</div><div className="v">hello@aro-catering.kr</div></div>
-            <div className="contact-item"><div className="k">ADDRESS</div><div className="v">서울시 강남구 언주로 00길 00</div></div>
+            <div className="contact-item"><div className="k">ADDRESS</div><div className="v"><a href={MAP_URL} target="_blank" rel="noopener noreferrer" aria-label="서울시 중구 충무로 24 B101, 네이버 지도 새 탭에서 열기">서울시 중구 충무로 24 B101</a></div></div>
             <div className="contact-item"><div className="k">INSTAGRAM</div><div className="v">@atelieraro</div></div>
-            <div style={{ marginTop: 50 }}>
-              <PhotoSlot caption="오시는 길 지도" ratio="4/3" />
-            </div>
+            <a className="contact-map-link" href={MAP_URL} target="_blank" rel="noopener noreferrer" aria-label="네이버 지도에서 위치 보기, 새 탭에서 열기">
+              <span>네이버 지도에서 위치 보기</span>
+              <span aria-hidden="true">↗</span>
+            </a>
           </div>
 
           <form className="inquiry" onSubmit={handleSubmit}>

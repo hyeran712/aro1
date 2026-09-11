@@ -1,5 +1,6 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import BrandText from '../components/BrandText';
 import PhotoSlot from '../components/PhotoSlot';
 
 const SERVICES = [
@@ -30,7 +31,7 @@ function Service() {
               <div className="cell" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding: 40 }}>
                 <div style={{ fontSize: 12.5, color: 'var(--sage)', marginBottom: 10 }}>{s.en}</div>
                 <div style={{ fontFamily: 'var(--serif)', fontSize: 24, color: 'var(--brown)', marginBottom: 14 }}>{s.kr}</div>
-                <p style={{ fontSize: 14.5, color: 'var(--brown-soft)', marginBottom: 18, maxWidth: '30em' }}>{s.desc}</p>
+                <p style={{ fontSize: 14.5, color: 'var(--brown-soft)', marginBottom: 18, maxWidth: '30em' }}><BrandText>{s.desc}</BrandText></p>
                 <div>
                   {s.tags.map((t) => (
                     <span key={t} style={{ fontSize: 12, color: 'var(--brown-soft)', border: '1px solid var(--line)', padding: '5px 12px', borderRadius: 20, marginRight: 8, display: 'inline-block', marginBottom: 6 }}>{t}</span>
