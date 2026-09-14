@@ -57,13 +57,20 @@ function Header({ homeHero = false }) {
           >
             JOURNAL
           </Link>
-          <Link to="/contact" className={isActive("/contact")} onClick={closeMenu}>
+          <Link
+            to="/contact"
+            className={isActive("/contact")}
+            onClick={closeMenu}
+          >
             CONTACT
           </Link>
         </nav>
 
         {/* RIGHT */}
         <div className="header-actions">
+          <Link to="/contact" className="inquiry-btn" onClick={closeMenu}>
+            REQUEST A QUOTE <span aria-hidden="true">→</span>
+          </Link>
           <span className="est">EST. 2026</span>
 
           {/* MOBILE MENU */}
@@ -89,19 +96,26 @@ function Header({ homeHero = false }) {
         onKeyDown={(event) => {
           if (event.key === "Escape") {
             closeMenu();
-            event.currentTarget.parentElement.querySelector('.menu-toggle').focus();
+            event.currentTarget.parentElement
+              .querySelector(".menu-toggle")
+              .focus();
           }
         }}
       >
         {[
-          ['/about', 'ABOUT'],
-          ['/service', 'SERVICES'],
-          ['/menu', 'MENU'],
-          ['/gallery', 'GALLERY'],
-          ['/journal', 'JOURNAL'],
-          ['/contact', 'CONTACT'],
+          ["/about", "ABOUT"],
+          ["/service", "SERVICES"],
+          ["/menu", "MENU"],
+          ["/gallery", "GALLERY"],
+          ["/journal", "JOURNAL"],
+          ["/contact", "CONTACT"],
         ].map(([path, label]) => (
-          <Link key={path} to={path} className={isActive(path)} onClick={closeMenu}>
+          <Link
+            key={path}
+            to={path}
+            className={isActive(path)}
+            onClick={closeMenu}
+          >
             {label}
           </Link>
         ))}
