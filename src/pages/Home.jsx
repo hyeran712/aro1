@@ -37,9 +37,13 @@ function Home() {
             상황에 맞는 최상의 메뉴와 서비스로 함께합니다.
           </p>
           <div className="occasion-actions">
-            <Link to="/gallery">
+            <a
+              href="https://www.instagram.com/atelieraro/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               GALLERY <span aria-hidden="true">→</span>
-            </Link>
+            </a>
             <Link to="/menu">
               VIEW MENU <span aria-hidden="true">→</span>
             </Link>
