@@ -14,7 +14,11 @@ function Header({ homeHero = false }) {
   };
 
   return (
-    <header className={`header${homeHero ? " header-home" : ""}`}>
+    <header
+      className={`header${homeHero ? " header-home" : ""}${
+        location.pathname === "/about" ? " header-about" : ""
+      }`}
+    >
       <div className="header-inner">
         {/* LOGO */}
         <Link to="/" className="logo" onClick={closeMenu}>

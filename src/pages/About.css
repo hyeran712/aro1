@@ -1,491 +1,282 @@
-.about-belief-page {
-  padding-top: 82px;
+.about-brand-page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 104px 30px 0;
+  color: #292a2c;
   background: #fdfcfb;
-  color: #303336;
-  font-family: "Gowun Batang", "Noto Serif KR", serif;
-  letter-spacing: 0;
+  font-family: var(--serif);
 }
 
-.about-belief-page section {
-  border: 0;
+.about-brand-page section {
+  border-top: 0;
 }
 
-/* =========================
-   OUR BELIEF
-========================= */
-
-.about-belief-intro {
-  padding: 72px 24px 48px;
+.about-brandmark {
+  padding: 26px 0 72px;
   text-align: center;
 }
 
-.about-belief-eyebrow {
-  margin: 0;
+.about-brandmark img {
+  width: min(330px, 48vw);
+  height: auto;
+  margin: 0 auto;
+  mix-blend-mode: multiply;
+}
+
+.about-brandmark p {
+  margin: 2px 0 0;
+  color: #5d6570;
   font-family: var(--serif);
   font-size: 13px;
-  line-height: 1.6;
+  letter-spacing: 0.2em;
+}
+
+.about-mission {
+  padding: 48px 34px 34px;
+}
+
+.about-eyebrow {
+  margin: 0 0 20px;
+  color: #59616a;
+  font-size: 12px;
+  font-weight: 600;
   letter-spacing: 0.08em;
 }
 
-.about-belief-intro h1 {
-  margin: 34px auto 0;
-  max-width: 1120px;
-
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 1.5;
-
-  word-break: keep-all;
-  overflow-wrap: anywhere;
-}
-
-.about-belief-rule {
-  width: 1px;
-  height: 46px;
-
-  margin: 22px auto 16px;
-
-  background: #bfc0be;
-}
-
-.about-belief-description {
-  margin: 0;
-
-  font-size: 20px;
-  line-height: 1.8;
-
-  word-break: keep-all;
-}
-
-.about-belief-description > span {
-  display: block;
-}
-
-/* =========================
-   MAIN CONTENT
-========================= */
-
-.about-belief-content {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 48px;
-}
-
-/* =========================
-   TABLE IMAGE
-========================= */
-
-.about-belief-photo {
-  position: relative;
-
-  margin: 0;
-
-  aspect-ratio: 2.6 / 1;
-
-  overflow: hidden;
-}
-
-.about-belief-photo > img {
-  display: block;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  object-position: center 58%;
-}
-
-.about-belief-photo figcaption {
-  position: absolute;
-
-  top: 36px;
-  right: 28px;
-
-  padding-left: 20px;
-
-  border-left: 1px solid #fff;
-
-  color: #fff;
-
+.about-mission h1 {
+  margin: 0 0 25px;
   font-family: var(--serif);
-
-  font-size: 12px;
-  line-height: 1.6;
-
-  text-shadow: 0 1px 4px rgba(48, 51, 54, 0.4);
+  font-size: clamp(20px, 2.1vw, 24px);
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
-/* =========================
-   THE ARO WAY
-========================= */
+.about-mission-copy {
+  max-width: 790px;
+  margin: 0;
+  color: #555b63;
+  font-family: var(--sans);
+  font-size: 14px;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+
+.about-meaning {
+  position: relative;
+  width: min(620px, 100%);
+  height: 176px;
+  margin: 28px auto 0;
+}
+
+.about-meaning::before,
+.about-meaning::after {
+  position: absolute;
+  content: "";
+  border: 1px solid #aeb6bd;
+}
+
+.about-meaning::before {
+  top: 20px;
+  left: 110px;
+  width: 400px;
+  height: 112px;
+  border-bottom-color: transparent;
+  border-radius: 50% 50% 0 0;
+}
+
+.about-meaning::after {
+  top: 53px;
+  left: 110px;
+  width: 400px;
+  height: 112px;
+  border-top-color: transparent;
+  border-radius: 0 0 50% 50%;
+}
+
+.about-meaning-core {
+  position: absolute;
+  z-index: 1;
+  top: 53px;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 224px;
+  height: 58px;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  background: #7b806e;
+  color: #fff;
+  font-family: var(--serif);
+  font-size: 11px;
+  line-height: 1.25;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+.about-meaning-label {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  color: #60666c;
+  font-size: 10px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.about-meaning-label span {
+  font-size: 10px;
+}
+
+.about-meaning-label small {
+  font-family: var(--sans);
+  font-size: 10px;
+}
+
+.about-meaning-people {
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.about-meaning-ingredient {
+  top: 53px;
+  left: 82px;
+}
+
+.about-meaning-occasion {
+  top: 53px;
+  right: 78px;
+}
+
+.about-meaning-community {
+  bottom: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .about-values-section {
-  padding: 40px 0 30px;
-}
-
-.about-values-section > .about-belief-eyebrow {
-  margin-bottom: 18px;
+  padding: 24px 0 48px;
 }
 
 .about-values-section h2 {
-  margin: 0 0 40px;
-
-  font-size: 36px;
+  margin: 0 0 18px;
+  font-family: var(--serif);
+  font-size: 21px;
   font-weight: 400;
-  line-height: 1.5;
-
-  word-break: keep-all;
+  line-height: 1.45;
+  letter-spacing: 0.01em;
 }
 
-/* =========================
-   VALUE LIST
-========================= */
-
 .about-value-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   margin: 0;
   padding: 0;
-
   list-style: none;
-
-  border-top: 1px solid #cdd0d0;
 }
 
 .about-value-list li {
-  display: grid;
-
-  grid-template-columns:
-    54px
-    110px
-    230px
-    1px
-    minmax(0, 1fr);
-
-  align-items: center;
-
-  column-gap: 18px;
-
-  min-height: 82px;
-
-  padding: 8px 0;
-
-  border-bottom: 1px solid #cdd0d0;
+  min-height: 122px;
+  padding: 10px 15px 8px 0;
+  border-right: 1px solid #d3d5d6;
 }
 
-/* 번호 */
+.about-value-list li:not(:first-child) {
+  padding-left: 17px;
+}
+
+.about-value-list li:last-child {
+  border-right: 0;
+}
 
 .about-value-number {
-  font-family: var(--serif);
-
-  font-size: 11px;
-
-  color: #777c79;
-}
-
-/* 아이콘 */
-
-.about-value-icon {
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  width: 72px;
-  height: 72px;
-}
-
-.about-value-icon img {
   display: block;
-
-  width: 56px;
-  height: 56px;
-
-  object-fit: contain;
+  margin-bottom: 2px;
+  color: #5e666e;
+  font-size: 15px;
 }
-
-/* 제목 */
 
 .about-value-list h3 {
-  margin: 0;
-
-  font-size: 18px;
+  margin: 0 0 13px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.5;
-
-  text-align: center;
+  line-height: 1.3;
   word-break: keep-all;
 }
-
-/* 세로 구분선 */
-
-.about-value-divider {
-  width: 1px;
-  height: 30px;
-
-  background: #cdd0d0;
-}
-
-/* 설명 */
 
 .about-value-list p {
   margin: 0;
-
-  padding-left: 30px;
-
-  font-size: 15px;
-  line-height: 1.8;
-
-  color: #868b88;
-
-  word-break: keep-all;
-}
-
-/* =========================
-   MOTTO
-========================= */
-
-.about-values-motto {
-  margin: 0;
-
-  padding: 16px 6px;
-
-  border-bottom: 1px solid #cdd0d0;
-
-  font-family: var(--serif);
-
+  color: #71777d;
+  font-family: var(--sans);
   font-size: 11px;
-  font-style: italic;
-
-  letter-spacing: 0.08em;
-
-  text-align: center;
-
-  color: #737875;
-}
-
-/* =========================
-   CLOSING
-========================= */
-
-.about-belief-closing {
-  padding: 44px 24px 28px;
-
-  text-align: center;
-
-  background: #f2f2f0;
-}
-
-.about-belief-closing h2 {
-  margin: 0;
-
-  font-size: 26px;
-  font-weight: 400;
-
+  line-height: 1.55;
   word-break: keep-all;
 }
 
-.about-belief-closing a {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 30px;
-
-  padding: 14px 0 6px;
-
-  margin-top: 6px;
-
-  border-bottom: 1px solid #858a89;
-
-  font-family: var(--serif);
-
-  font-size: 13px;
-
-  color: inherit;
-
-  text-decoration: none;
-}
-
-.about-belief-closing a:hover {
-  color: #6a766b;
-}
-
-.about-belief-closing a:focus-visible {
-  outline: 2px solid currentColor;
-  outline-offset: 5px;
-}
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 1100px) {
-  .about-belief-page {
-    padding-top: 72px;
+@media (max-width: 700px) {
+  .about-brand-page {
+    padding: 88px 20px 0;
   }
 
-  .about-belief-content {
-    padding: 0 32px;
+  .about-brandmark {
+    padding: 22px 0 48px;
   }
 
-  .about-belief-intro h1 {
-    font-size: 34px;
+  .about-brandmark img {
+    width: min(260px, 64vw);
   }
 
-  .about-belief-description {
-    font-size: 18px;
-  }
-
-  .about-values-section h2 {
-    font-size: 31px;
-  }
-
-  .about-value-list li {
-    display: grid;
-
-    grid-template-columns:
-      40px
-      86px
-      110px
-      1px
-      minmax(0, 1fr);
-
-    align-items: center;
-    column-gap: 16px;
-
-    min-height: 110px;
-    padding: 14px 0;
-
-    border-bottom: 1px solid #cdd0d0;
-  }
-
-  .about-value-icon {
-    width: 54px;
-    height: 54px;
-  }
-
-  .about-value-icon img {
-    width: 38px;
-    height: 38px;
-  }
-
-  .about-value-list h3 {
-    font-size: 17px;
-  }
-
-  .about-value-list p {
-    font-size: 14px;
-  }
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 600px) {
-  .about-belief-intro {
-    padding: 46px 20px 32px;
-  }
-
-  .about-belief-intro h1 {
-    margin-top: 24px;
-
-    font-size: 28px;
-  }
-
-  .about-belief-description {
-    font-size: 15px;
-  }
-
-  .about-belief-content {
-    padding: 0 20px;
-  }
-
-  .about-belief-photo {
-    aspect-ratio: 4 / 3;
-  }
-
-  .about-belief-photo figcaption {
-    top: 18px;
-    right: 16px;
-
-    padding-left: 12px;
-
+  .about-brandmark p {
     font-size: 10px;
   }
 
-  /* THE ARO WAY */
+  .about-mission {
+    padding: 38px 0 28px;
+  }
+
+  .about-mission h1 {
+    font-size: 23px;
+    white-space: normal;
+  }
+
+  .about-mission-copy {
+    font-size: 13px;
+  }
+
+  .about-meaning {
+    height: 190px;
+    transform: scale(0.78);
+    transform-origin: center top;
+    margin-top: 24px;
+    margin-bottom: -34px;
+  }
 
   .about-values-section {
-    padding: 44px 0 32px;
+    padding-top: 20px;
   }
 
   .about-values-section h2 {
-    margin-bottom: 26px;
-
-    font-size: 24px;
+    font-size: 18px;
   }
 
-  /* VALUE LIST */
-
-  .about-value-list li {
-    grid-template-columns:
-      24px
-      46px
-      92px
-      1px
-      minmax(0, 1fr);
-
-    column-gap: 8px;
-
-    min-height: 82px;
-
-    padding: 12px 0;
+  .about-value-list {
+    grid-template-columns: 1fr;
   }
 
-  .about-value-number {
-    font-size: 9px;
+  .about-value-list li,
+  .about-value-list li:not(:first-child) {
+    min-height: 0;
+    padding: 14px 0;
+    border-right: 0;
+    border-bottom: 1px solid #d3d5d6;
   }
 
-  .about-value-icon {
-    width: 42px;
-    height: 42px;
-  }
-
-  .about-value-icon img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .about-value-list h3 {
-    font-size: 14px;
-    line-height: 1.4;
-  }
-
-  .about-value-divider {
-    display: block;
-
-    width: 1px;
-    height: 44px;
-  }
-
-  .about-value-list p {
-    margin: 0;
-
-    font-size: 11px;
-    line-height: 1.55;
-
-    word-break: keep-all;
-  }
-
-  .about-values-motto {
-    padding: 14px 4px;
-
-    font-size: 9px;
-  }
-
-  /* CLOSING */
-
-  .about-belief-closing h2 {
-    font-size: 23px;
+  .about-value-list li:last-child {
+    border-bottom: 0;
   }
 }

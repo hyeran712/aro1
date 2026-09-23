@@ -112,6 +112,10 @@ header.header,
   border-bottom: 1px solid var(--line);
 }
 
+header.header-about {
+  border-bottom: 0;
+}
+
 .header-inner,
 .aro-header-inner {
   width: 100%;

@@ -1,34 +1,27 @@
-import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import BrandText from "../components/BrandText";
 import "./About.css";
 
 const values = [
   {
     title: "온전함",
     description: "가장 본질에 충실한 선택",
-    image: "about/integrity.png",
   },
   {
     title: "조용한 존재감",
     description: "과하지 않지만 분명한 가치",
-    image: "about/calm-presence.png",
   },
   {
     title: "진심",
     description: "한 사람, 한 자리를 생각하는 마음",
-    image: "about/sincerity.png",
   },
   {
     title: "연결",
     description: "음식으로 이어지는 사람과 사람",
-    image: "about/connection.png",
   },
   {
     title: "각인",
     description: "오래 기억되는 특별한 순간",
-    image: "about/imprint.png",
   },
 ];
 
@@ -37,101 +30,72 @@ function About() {
     <>
       <Header />
 
-      <main className="about-belief-page">
-        {/* OUR BELIEF */}
+      <main className="about-brand-page">
+        <section className="about-brandmark" aria-label="ARO brand">
+          <img
+            src={`${process.env.PUBLIC_URL}/images/aro-logo.png`}
+            alt="ARO"
+          />
+          <p>FOOD FOR LASTING MOMENTS</p>
+        </section>
+
         <section
-          className="about-belief-intro"
-          aria-labelledby="about-belief-title"
+          className="about-mission"
+          aria-labelledby="about-mission-title"
         >
-          <p className="about-belief-eyebrow">OUR BELIEF</p>
-
-          <h1 id="about-belief-title">
-            우리는 식사가 하나의 대화라고 생각합니다.
+          <p className="about-eyebrow">BRAND MISSION</p>
+          <h1 id="about-mission-title">
+            ‘아로새기다’에서 시작한 이름. 좋은 순간을 마음에 오래 새긴다는
+            뜻입니다.
           </h1>
-
-          <div className="about-belief-rule" aria-hidden="true" />
-
-          <p className="about-belief-description">
-            <span>좋은 식사는 사람과 사람을 이어줍니다.</span>
-
-            <span>
-              <BrandText />는 음식이 만들어내는 대화의 순간을 믿으며,
-            </span>
-
-            <span>
-              일상의 자리부터 특별한 날까지, 다정하고 깊이 있는 경험을
-              제안합니다.
-            </span>
+          <p className="about-mission-copy">
+            새긴다는 건 흘러내리지 않고 그 자리에 맞춰 고여내는 일이다. 메뉴가
+            정한 결, 그 안에서 머물고 있는 결, 그리고 그 결에 맞는 음식의 결을
+            식탁에 옮긴다. 그리고 모두의 기억이 그 날을 새길 수 있는 것이 우리의
+            미션입니다.
           </p>
         </section>
 
-        <div className="about-belief-content">
-          {/* TABLE IMAGE */}
-          <figure className="about-belief-photo">
-            <img
-              src={`${process.env.PUBLIC_URL}/images/about/belief-table.png`}
-              alt="ARO table setting"
-              fetchPriority="high"
-            />
+        <section className="about-meaning" aria-label="ARO brand meaning">
+          <div className="about-meaning-label about-meaning-people">
+            <span>PEOPLE</span>
+            <small>사람</small>
+          </div>
+          <div className="about-meaning-label about-meaning-ingredient">
+            <span>INGREDIENT</span>
+            <small>좋은 재료</small>
+          </div>
+          <div className="about-meaning-label about-meaning-occasion">
+            <span>OCCASION</span>
+            <small>특별한 순간</small>
+          </div>
+          <div className="about-meaning-label about-meaning-community">
+            <span>COMMUNITY</span>
+            <small>따뜻한 관계</small>
+          </div>
+          <div className="about-meaning-core">
+            A MEANINGFUL
+            <br />
+            DINING EXPERIENCE
+          </div>
+        </section>
 
-            <figcaption>
-              FOOD
-              <br />
-              PEOPLE
-              <br />
-              OCCASIONS
-              <br />A MORE LASTING TOMORROW
-            </figcaption>
-          </figure>
-
-          {/* THE ARO WAY */}
-          <section
-            id="attitude"
-            className="about-values-section"
-            aria-labelledby="about-values-title"
-          >
-            <p className="about-belief-eyebrow">THE ARO WAY</p>
-
-            <h2 id="about-values-title">우리가 전하고자 하는 다섯 가지.</h2>
-
-            <ol className="about-value-list">
-              {values.map((value, index) => (
-                <li key={value.title}>
-                  <span className="about-value-number">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-
-                  <div className="about-value-icon">
-                    <img
-                      src={`${process.env.PUBLIC_URL}/images/${value.image}`}
-                      alt={value.title}
-                      loading="lazy"
-                    />
-                  </div>
-
-                  <h3>{value.title}</h3>
-
-                  <div className="about-value-divider" />
-
-                  <p>{value.description}</p>
-                </li>
-              ))}
-            </ol>
-
-            <p className="about-values-motto">
-              BETTER FOOD MAKES A MORE THOUGHTFUL TOMORROW.
-            </p>
-          </section>
-        </div>
-
-        {/* CLOSING */}
-        <section className="about-belief-closing">
-          <h2>일상에 오래 남는 경험을 만듭니다.</h2>
-
-          <Link to="/service">
-            ARO CATERING
-            <span aria-hidden="true">→</span>
-          </Link>
+        <section
+          className="about-values-section"
+          aria-labelledby="about-values-title"
+        >
+          <h2 id="about-values-title">ARO의 다섯가지 태도</h2>
+          <ol className="about-value-list">
+            {values.map((value, index) => (
+              <li key={value.title}>
+                <span className="about-value-number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <h3>{value.title}</h3>
+                <p>{value.description}</p>
+              </li>
+            ))}
+          </ol>
         </section>
       </main>
 
