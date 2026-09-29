@@ -12,7 +12,7 @@
 }
 
 .about-brandmark {
-  padding: 26px 0 72px;
+  padding: 26px 0 108px;
   text-align: center;
 }
 
@@ -32,7 +32,7 @@
 }
 
 .about-mission {
-  padding: 48px 34px 34px;
+  padding: 100px 34px 42px;
 }
 
 .about-eyebrow {
@@ -65,48 +65,36 @@
 }
 
 .about-meaning {
+  --meaning-ellipse-width: min(400px, calc(100% - 32px));
   position: relative;
   width: min(620px, 100%);
   height: 176px;
   margin: 28px auto 0;
 }
 
-.about-meaning::before,
-.about-meaning::after {
-  position: absolute;
-  content: "";
-  border: 1px solid #aeb6bd;
-}
-
 .about-meaning::before {
-  top: 20px;
-  left: 110px;
-  width: 400px;
-  height: 112px;
-  border-bottom-color: transparent;
-  border-radius: 50% 50% 0 0;
-}
-
-.about-meaning::after {
-  top: 53px;
-  left: 110px;
-  width: 400px;
-  height: 112px;
-  border-top-color: transparent;
-  border-radius: 0 0 50% 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--meaning-ellipse-width);
+  height: 146px;
+  border: 1px solid #aeb6bd;
+  border-radius: 50%;
+  content: "";
+  transform: translate(-50%, -50%);
 }
 
 .about-meaning-core {
   position: absolute;
   z-index: 1;
-  top: 53px;
+  top: 50%;
   left: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 224px;
+  width: min(224px, 100%);
   height: 58px;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   border-radius: 50px;
   background: #7b806e;
   color: #fff;
@@ -122,6 +110,7 @@
   z-index: 2;
   display: flex;
   flex-direction: column;
+  align-items: center;
   color: #60666c;
   font-size: 10px;
   line-height: 1.3;
@@ -138,29 +127,33 @@
 }
 
 .about-meaning-people {
-  top: 4px;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .about-meaning-ingredient {
-  top: 53px;
-  left: 82px;
+  top: 50%;
+  left: calc(50% - var(--meaning-ellipse-width) / 2 - 36px);
+  width: 72px;
+  transform: translateY(-50%);
 }
 
 .about-meaning-occasion {
-  top: 53px;
-  right: 78px;
+  top: 50%;
+  right: calc(50% - var(--meaning-ellipse-width) / 2 - 36px);
+  width: 72px;
+  transform: translateY(-50%);
 }
 
 .about-meaning-community {
-  bottom: 2px;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
 
 .about-values-section {
-  padding: 24px 0 48px;
+  padding: 88px 0 56px;
 }
 
 .about-values-section h2 {
@@ -224,7 +217,7 @@
   }
 
   .about-brandmark {
-    padding: 22px 0 48px;
+    padding: 22px 0 72px;
   }
 
   .about-brandmark img {
@@ -236,7 +229,7 @@
   }
 
   .about-mission {
-    padding: 38px 0 28px;
+    padding: 72px 0 36px;
   }
 
   .about-mission h1 {
@@ -249,15 +242,17 @@
   }
 
   .about-meaning {
-    height: 190px;
-    transform: scale(0.78);
-    transform-origin: center top;
+    width: 100%;
+    height: 176px;
     margin-top: 24px;
-    margin-bottom: -34px;
+  }
+
+  .about-meaning-core {
+    width: min(224px, calc(100% - 100px));
   }
 
   .about-values-section {
-    padding-top: 20px;
+    padding-top: 60px;
   }
 
   .about-values-section h2 {
