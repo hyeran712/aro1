@@ -162,3 +162,29 @@ npm run build
 [ARO 웹사이트 제작 포트폴리오 PPT 다운로드](output/ARO_website_portfolio_summary.pptx)
 
 기획 목표, 디자인 방향, 페이지 구성, 주요 코드와 개선 과제를 12장으로 정리했습니다.
+
+### 슬라이드 미리보기
+
+![ARO 포트폴리오 슬라이드 1](docs/slides/slide-01.png)
+
+![ARO 포트폴리오 슬라이드 2](docs/slides/slide-02.png)
+
+![ARO 포트폴리오 슬라이드 3](docs/slides/slide-03.png)
+
+![ARO 포트폴리오 슬라이드 4](docs/slides/slide-04.png)
+
+![ARO 포트폴리오 슬라이드 5](docs/slides/slide-05.png)
+
+![ARO 포트폴리오 슬라이드 6](docs/slides/slide-06.png)
+
+![ARO 포트폴리오 슬라이드 7](docs/slides/slide-07.png)
+
+![ARO 포트폴리오 슬라이드 8](docs/slides/slide-08.png)
+
+![ARO 포트폴리오 슬라이드 9](docs/slides/slide-09.png)
+
+![ARO 포트폴리오 슬라이드 10](docs/slides/slide-10.png)
+
+![ARO 포트폴리오 슬라이드 11](docs/slides/slide-11.png)
+
+![ARO 포트폴리오 슬라이드 12](docs/slides/slide-12.png)
