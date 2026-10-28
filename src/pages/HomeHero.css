@@ -2,7 +2,7 @@
   padding: 28px 48px 32px;
   background: #faf9f7;
   color: #302e29;
-  font-family: "Marcellus", "MaruBuri", serif;
+  font-family: "Marcellus", "Gowun Dodum", serif;
   letter-spacing: 0;
 }
 
@@ -395,7 +395,7 @@
 }
 
 .occasion-copy h1 {
-  font-family: "Marcellus", "MaruBuri", serif;
+  font-family: "Marcellus", "Gowun Dodum", serif;
   font-size: clamp(28px, 2.35vw, 44px);
   font-weight: 400;
   letter-spacing: -0.035em;
@@ -404,7 +404,7 @@
 }
 
 .occasion-description {
-  font-family: "Marcellus", "MaruBuri", serif;
+  font-family: "Marcellus", "Gowun Dodum", serif;
   font-size: clamp(13px, 0.9vw, 17px);
   line-height: 1.65;
   margin-top: 0.85vw;
@@ -462,7 +462,7 @@
   top: 15%;
   right: 2%;
   color: #fff9ed;
-  font-family: "Marcellus", "MaruBuri", serif;
+  font-family: "Marcellus", "Gowun Dodum", serif;
   font-size: clamp(25px, 2.2vw, 42px);
   font-weight: 400;
   letter-spacing: 0.07em;
@@ -522,7 +522,7 @@
 }
 
 .occasion-note p {
-  font-family: "Marcellus", "MaruBuri", serif;
+  font-family: "Marcellus", "Gowun Dodum", serif;
   font-size: clamp(26px, 2.5vw, 50px);
   line-height: 1.35;
   transform: rotate(-6deg);

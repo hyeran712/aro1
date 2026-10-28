@@ -2,11 +2,7 @@
   ARO GLOBAL STYLE
    Premium editorial catering website
 ========================================================= */
-@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
-@font-face { font-family:"MaruBuri"; font-style:normal; font-weight:300; font-display:swap; src:url("https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Light.woff2") format("woff2"); }
-@font-face { font-family:"MaruBuri"; font-style:normal; font-weight:400; font-display:swap; src:url("https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.woff2") format("woff2"); }
-@font-face { font-family:"MaruBuri"; font-style:normal; font-weight:600; font-display:swap; src:url("https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-SemiBold.woff2") format("woff2"); }
-@font-face { font-family:"MaruBuri"; font-style:normal; font-weight:700; font-display:swap; src:url("https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Bold.woff2") format("woff2"); }
+@import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Marcellus&display=swap");
 
 
 :root {
@@ -26,9 +22,9 @@
   --terracotta: #b7b8b9;
   --terracotta-soft: #d5d6d7;
 
-  --serif: "Marcellus", "MaruBuri", serif;
+  --serif: "Marcellus", "Gowun Dodum", serif;
   --sans:
-    "Marcellus", "MaruBuri", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Marcellus", "Gowun Dodum", -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Malgun Gothic", sans-serif;
 }
 
@@ -315,7 +311,7 @@ h2.about-team-title {
 /* FAQ 제목 전용 */
 
 .home-faq .section-title {
-  font-family: "Marcellus", "MaruBuri", serif;
+  font-family: "Marcellus", "Gowun Dodum", serif;
   font-size: clamp(34px, 3.4vw, 50px);
   font-weight: 400;
   line-height: 1.25;
@@ -324,7 +320,7 @@ h2.about-team-title {
 }
 
 .home-faq .section-title .accent-italic {
-  font-family: "Marcellus", "MaruBuri", serif;
+  font-family: "Marcellus", "Gowun Dodum", serif;
   font-style: normal;
   color: #8f9398;
 }
@@ -416,7 +412,7 @@ h2.about-team-title {
 }
 
 .hero-title-ko {
-  font-family: "Marcellus", "MaruBuri", serif;
+  font-family: "Marcellus", "Gowun Dodum", serif;
   font-size: clamp(26px, 3vw, 46px);
   font-weight: 400;
   line-height: 1.4;
@@ -438,7 +434,7 @@ h2.about-team-title {
 }
 
 .hero-about-copy p:first-child {
-  font-family: "Marcellus", "MaruBuri", serif;
+  font-family: "Marcellus", "Gowun Dodum", serif;
   font-size: clamp(42px, 4.7vw, 62px);
   font-weight: 400;
   line-height: 1.35;
@@ -448,7 +444,7 @@ h2.about-team-title {
 }
 
 .hero-about-copy p:last-child {
-  font-family: "Marcellus", "MaruBuri", serif;
+  font-family: "Marcellus", "Gowun Dodum", serif;
   font-size: 13px;
   line-height: 1.8;
   color: #777;
@@ -670,7 +666,7 @@ h2.about-team-title {
 }
 
 .service-band-item span {
-  font-family: "Marcellus", "MaruBuri", serif;
+  font-family: "Marcellus", "Gowun Dodum", serif;
   font-size: 27px;
   font-weight: 400;
   color: #303336;
@@ -1031,7 +1027,7 @@ h2.about-team-title {
 .qd-copy h2 {
   margin-top: 16px;
 
-  font-family: "Marcellus", "MaruBuri", serif;
+  font-family: "Marcellus", "Gowun Dodum", serif;
 
   font-size: clamp(32px, 3.2vw, 46px);
 
@@ -1044,7 +1040,7 @@ h2.about-team-title {
   color: #f7f5f3;
 }
 .qd-copy h2 .accent-italic {
-  font-family: "Marcellus", "MaruBuri", serif;
+  font-family: "Marcellus", "Gowun Dodum", serif;
 
   font-style: normal;
 
@@ -1656,7 +1652,7 @@ form.inquiry {
   }
 
   .services-heading h2 {
-    font-family: "Marcellus", "MaruBuri", serif;
+    font-family: "Marcellus", "Gowun Dodum", serif;
     font-size: 46px;
   }
 
@@ -1762,7 +1758,7 @@ form.inquiry {
 .menu-hero.label {
   margin-bottom: 14px;
 
-  font-family: "Marcellus", "MaruBuri", serif;
+  font-family: "Marcellus", "Gowun Dodum", serif;
   font-size: 15px;
   font-weight: 500;
   letter-spacing: 0.2em;
@@ -1779,7 +1775,7 @@ form.inquiry {
 .about-page-hero h1 {
   max-width: 15em;
 
-  font-family: "Marcellus", "MaruBuri", serif;
+  font-family: "Marcellus", "Gowun Dodum", serif;
 
   font-size: clamp(32px, 3.5vw, 48px);
 
