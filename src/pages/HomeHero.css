@@ -110,9 +110,11 @@
 .philosophy-story-copy {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   min-width: 0;
-  padding-top: 60px;
+  padding-top: 0;
 }
 
 .philosophy-story-eyebrow {
@@ -128,23 +130,6 @@
   overflow-wrap: anywhere;
 }
 
-.philosophy-story-copy h2::after {
-  content: "";
-  display: block;
-  width: 56px;
-  height: 2px;
-  margin: 32px 0 36px;
-  background: #b7826c;
-}
-
-.philosophy-story-description {
-  font-size: 17px;
-  line-height: 1.9;
-  word-break: keep-all;
-}
-.philosophy-story-description p + p {
-  margin-top: 26px;
-}
 .philosophy-story-link {
   display: inline-flex;
   align-items: center;
@@ -152,7 +137,7 @@
   gap: 20px;
   min-height: 48px;
   padding: 10px 26px;
-  margin-top: 34px;
+  margin-top: 36px;
   border: 1px solid #bb9988;
   color: #936b59;
   font-family: var(--serif);
@@ -218,14 +203,8 @@
     gap: 26px;
     grid-template-columns: 1fr 1.1fr 0.9fr;
   }
-  .philosophy-story-copy {
-    padding-top: 30px;
-  }
   .philosophy-story-copy h2 {
     font-size: 30px;
-  }
-  .philosophy-story-description {
-    font-size: 15px;
   }
   .philosophy-story-tall {
     min-height: 720px;
@@ -257,8 +236,8 @@
     font-size: 34px;
     line-height: 1.5;
   }
-  .philosophy-story-description {
-    max-width: 520px;
+  .philosophy-story-link {
+    margin-top: 28px;
   }
   .philosophy-story-signature {
     max-width: 360px;

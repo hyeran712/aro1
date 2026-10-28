@@ -169,20 +169,6 @@ function Home() {
                 <br />
                 생각합니다.
               </h2>
-              <div className="philosophy-story-description">
-                <p>
-                  좋은 식사는 사람과 사람을 이어주고,
-                  <br />
-                  특별한 순간을 오래 기억하게 합니다.
-                </p>
-                <p>
-                  <BrandText />는 음식, 공간, 사람 사이의 대화를 하나의 식탁으로
-                  만듭니다.
-                  <br />
-                  정성스럽게 준비한 메뉴와 섬세한 서비스로 어떤 자리든 더 깊은
-                  이야기가 흐르는 시간이 되도록 합니다.
-                </p>
-              </div>
               <Link className="philosophy-story-link" to="/about">
                 MORE ABOUT ARO <span aria-hidden="true">→</span>
               </Link>
@@ -289,15 +275,11 @@ function Home() {
       {/* =====================================
           FAQ
       ===================================== */}
-      <section className="home-faq">
+      <section className="home-faq" id="home-faq" aria-labelledby="faq-title">
         <div className="wrap" style={{ maxWidth: "900px" }}>
-          <div className="label">BEFORE YOU ASK</div>
+          <div className="label" lang="en">GOOD TO KNOW</div>
 
-          <h2 className="section-title">
-            묻기 전에,
-            <br />
-            <span className="accent-italic">먼저</span> 답해둡니다.
-          </h2>
+          <h2 className="section-title" id="faq-title">궁금한 점을 모았어요.</h2>
 
           <div className="faq-list">
             <details className="faq-item" open>
@@ -357,6 +339,7 @@ function Home() {
           QUOTE
       ===================================== */}
       <section
+        aria-labelledby="inquiry-title"
         style={{
           paddingTop: 0,
           background: "var(--ivory-deep)",
@@ -366,24 +349,18 @@ function Home() {
           <div className="quote-dark-grid">
             {/* COPY */}
             <div className="qd-copy">
-              <div className="label">REQUEST A QUOTE</div>
+              <div className="label" lang="en">LET’S PLAN YOUR TABLE</div>
 
-              <h2>
-                문의를 남겨주세요,
-                <br />
-                <span className="accent-italic">곧</span> 답장드릴게요.
-              </h2>
+              <h2 id="inquiry-title">어떤 자리를 준비하시나요?</h2>
 
               <p>
-                <p>
-                  공간, 일정, 인원만 알려주시면 <BrandText />가 어울리는 방향을
-                  함께 제안드립니다.
-                </p>
+                날짜와 인원, 장소를 알려주세요. 어울리는 구성을 제안해드릴게요.
               </p>
             </div>
 
-            {/* FORM */}
-            <QuoteForm />
+            <Link className="qd-inquiry-link" to="/contact">
+              문의하기 <span aria-hidden="true">↗</span>
+            </Link>
           </div>
         </div>
       </section>
@@ -393,76 +370,6 @@ function Home() {
       ===================================== */}
       <Footer />
     </>
-  );
-}
-
-/* =====================================
-   QUOTE FORM
-===================================== */
-
-function QuoteForm() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    alert("시안용 폼입니다. 실제 문의 처리는 연동이 필요합니다.");
-  };
-
-  return (
-    <form className="qd-form" onSubmit={handleSubmit}>
-      <div className="qd-row">
-        <div>
-          <label>이름</label>
-
-          <input type="text" placeholder="성함 또는 소속" />
-        </div>
-
-        <div>
-          <label>연락처</label>
-
-          <input type="text" placeholder="이메일 또는 전화번호" />
-        </div>
-      </div>
-
-      <div className="qd-row">
-        <div>
-          <label>문의 유형</label>
-
-          <select>
-            <option>웨딩 케이터링</option>
-
-            <option>야외 웨딩</option>
-
-            <option>기업 행사</option>
-
-            <option>브랜드 행사</option>
-
-            <option>프라이빗 다이닝</option>
-          </select>
-        </div>
-
-        <div>
-          <label>예정 인원</label>
-
-          <input type="text" placeholder="예: 120명" />
-        </div>
-      </div>
-
-      <div>
-        <label>문의 내용</label>
-
-        <textarea
-          placeholder="공간, 일정, 분위기 등 자유롭게 적어주세요."
-          style={{
-            minHeight: "70px",
-            resize: "vertical",
-          }}
-        />
-      </div>
-
-      <button className="qd-submit" type="submit">
-        문의 보내기 →
-      </button>
-    </form>
   );
 }
 

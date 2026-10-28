@@ -311,18 +311,24 @@ h2.about-team-title {
 /* FAQ 제목 전용 */
 
 .home-faq .section-title {
-  font-family: "Marcellus", "Gowun Dodum", serif;
+  font-family: "Gowun Dodum", sans-serif;
   font-size: clamp(34px, 3.4vw, 50px);
   font-weight: 400;
-  line-height: 1.25;
+  line-height: 1.4;
   letter-spacing: -0.04em;
   color: var(--brown);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
-.home-faq .section-title .accent-italic {
-  font-family: "Marcellus", "Gowun Dodum", serif;
-  font-style: normal;
-  color: #8f9398;
+.home-faq .label,
+.qd-copy .label {
+  font-family: "Marcellus", serif;
+}
+
+.home-faq .faq-list {
+  font-family: "Gowun Dodum", sans-serif;
 }
 
 .accent-italic {
@@ -1014,37 +1020,33 @@ h2.about-team-title {
 
 .quote-dark-grid {
   display: grid;
-  grid-template-columns: 0.82fr 1.18fr;
-  align-items: start;
-  gap: 72px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 48px;
 }
 
-.qd-copy.label {
-  font-size: 9px;
+.qd-copy .label {
+  font-size: 12px;
   color: var(--silver-soft);
 }
 
 .qd-copy h2 {
   margin-top: 16px;
 
-  font-family: "Marcellus", "Gowun Dodum", serif;
+  font-family: "Gowun Dodum", sans-serif;
 
   font-size: clamp(32px, 3.2vw, 46px);
 
   font-weight: 400;
 
-  line-height: 1.2;
+  line-height: 1.4;
 
   letter-spacing: -0.04em;
 
   color: #f7f5f3;
-}
-.qd-copy h2 .accent-italic {
-  font-family: "Marcellus", "Gowun Dodum", serif;
-
-  font-style: normal;
-
-  color: #8f9398;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  text-wrap: balance;
 }
 
 .qd-copy p {
@@ -1052,9 +1054,38 @@ h2.about-team-title {
 
   margin-top: 16px;
 
-  font-size: 10px;
+  font-family: "Gowun Dodum", sans-serif;
+  font-size: 16px;
   line-height: 1.8;
-  color: rgba(247, 245, 243, 0.75);
+  color: #e8e5e1;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+.qd-inquiry-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: start;
+  gap: 28px;
+  min-height: 52px;
+  padding: 14px 28px;
+  background: var(--ivory);
+  border: 1px solid var(--ivory);
+  color: var(--brown);
+  font-family: "Gowun Dodum", sans-serif;
+  font-size: 16px;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.qd-inquiry-link:hover {
+  background: var(--ivory-deep);
+}
+
+.qd-inquiry-link:focus-visible {
+  outline: 2px solid var(--ivory);
+  outline-offset: 5px;
 }
 
 .qd-form {
