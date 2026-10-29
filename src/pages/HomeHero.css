@@ -370,7 +370,7 @@
 .occasion-eyebrow {
   font-size: clamp(10px, 0.65vw, 12px);
   letter-spacing: 0.38em;
-  margin-bottom: 1.5vw;
+  margin-bottom: clamp(24px, 2.4vw, 40px);
 }
 
 .occasion-copy h1 {
@@ -386,8 +386,9 @@
   font-family: "Marcellus", "Gowun Dodum", serif;
   font-size: clamp(13px, 0.9vw, 17px);
   line-height: 1.65;
-  margin-top: 0.85vw;
-  white-space: nowrap;
+  margin-top: clamp(24px, 2vw, 34px);
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 /* 서비스 아이콘 영역 */
@@ -454,8 +455,8 @@
 
 .occasion-actions {
   display: flex;
-  gap: 1.2vw;
-  margin-top: 1.8vw;
+  gap: clamp(20px, 2.4vw, 40px);
+  margin-top: clamp(32px, 3vw, 48px);
 }
 
 .occasion-actions a {
@@ -463,8 +464,8 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  min-height: 50px;
-  padding: 15px 32px;
+  min-height: 56px;
+  padding: 16px 32px;
   border: 1px solid var(--cool-gray);
   background: var(--cool-gray);
   color: #fff;
@@ -474,6 +475,12 @@
   transition:
     background 0.2s,
     color 0.2s;
+}
+
+.occasion-instagram-icon {
+  width: 1.4em;
+  height: 1.4em;
+  flex-shrink: 0;
 }
 
 .occasion-actions a + a {
@@ -564,7 +571,7 @@
   }
 
   .occasion-actions {
-    margin-top: 24px;
+    margin-top: 32px;
   }
 
   .occasion-hero::before {

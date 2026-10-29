@@ -947,6 +947,16 @@ h2.about-team-title {
    FAQ
 ========================================================= */
 
+.home-faq .wrap,
+.quote-dark-section {
+  width: calc(100% - 112px);
+  max-width: 1120px;
+}
+
+.home-faq .wrap {
+  padding: 0;
+}
+
 .faq-list {
   margin-top: 44px;
   border-top: 1px solid var(--line);
@@ -1007,9 +1017,6 @@ h2.about-team-title {
 ========================================================= */
 
 .quote-dark-section {
-  width: calc(100% - 56px);
-  max-width: 1320px;
-
   margin: 70px auto 0;
 
   padding: 68px 60px;
@@ -1718,8 +1725,12 @@ form.inquiry {
     grid-template-columns: 1fr;
   }
 
+  .home-faq .wrap,
   .quote-dark-section {
-    width: calc(100% - 28px);
+    width: calc(100% - 40px);
+  }
+
+  .quote-dark-section {
     padding: 48px 26px;
   }
 

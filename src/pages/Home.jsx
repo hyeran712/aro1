@@ -32,9 +32,9 @@ function Home() {
             케이터링 <BrandText />
           </h1>
           <p className="occasion-description">
-            작은 모임부터 대규모 행사까지,
+            작은 모임부터 큰 행사까지,
             <br />
-            상황에 맞는 최상의 메뉴와 서비스로 함께합니다.
+            자리에 어울리는 음식과 세심한 서비스를 준비합니다.
           </p>
           <div className="occasion-actions">
             <a
@@ -42,7 +42,20 @@ function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              GALLERY <span aria-hidden="true">→</span>
+              <svg
+                className="occasion-instagram-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.7"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+              INSTAGRAM <span aria-hidden="true">→</span>
             </a>
             <Link to="/menu">
               VIEW MENU <span aria-hidden="true">→</span>
@@ -276,7 +289,7 @@ function Home() {
           FAQ
       ===================================== */}
       <section className="home-faq" id="home-faq" aria-labelledby="faq-title">
-        <div className="wrap" style={{ maxWidth: "900px" }}>
+        <div className="wrap">
           <div className="label" lang="en">GOOD TO KNOW</div>
 
           <h2 className="section-title" id="faq-title">궁금한 점을 모았어요.</h2>
