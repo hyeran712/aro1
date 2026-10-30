@@ -7,16 +7,38 @@ const MAP_URL = `https://map.naver.com/p/search/${encodeURIComponent('서울시 
 function Contact() {
   const [form, setForm] = useState({ type: '베뉴 파트너십', name: '', contact: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
+    setSubmitted(false);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // 실제 서비스에서는 여기서 서버(API)나 이메일 전송 서비스로 form 데이터를 보내면 됩니다.
-    console.log('문의 제출:', form);
-    setSubmitted(true);
+    if (sending) return;
+    setError('');
+    setSubmitted(false);
+    const endpoint = process.env.REACT_APP_INQUIRY_API_URL;
+    if (!endpoint) {
+      setError('현재 온라인 문의를 준비 중입니다. 잠시 후 다시 이용해주세요.');
+      return;
+    }
+    setSending(true);
+    try {
+      const response = await fetch(endpoint, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form), signal: AbortSignal.timeout(20000),
+      });
+      const result = await response.json();
+      if (!response.ok || result.ok !== true) throw new Error('send failed');
+      setSubmitted(true);
+    } catch {
+      setError('전송을 확인하지 못했습니다. 잠시 후 다시 시도해주세요.');
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -43,7 +65,8 @@ function Contact() {
             </a>
           </div>
 
-          <form className="inquiry" onSubmit={handleSubmit}>
+          <form className="inquiry" onSubmit={handleSubmit} aria-busy={sending}>
+            <fieldset disabled={sending} style={{ border: 0, padding: 0, margin: 0, minWidth: 0 }}>
             <div className="field">
               <label htmlFor="f-type">문의 유형</label>
               <select id="f-type" name="type" value={form.type} onChange={handleChange}>
@@ -55,18 +78,20 @@ function Contact() {
             </div>
             <div className="field">
               <label htmlFor="f-name">이름 / 소속</label>
-              <input id="f-name" name="name" type="text" placeholder="예: 000웨딩홀 운영팀" value={form.name} onChange={handleChange} />
+              <input id="f-name" name="name" type="text" required maxLength={80} placeholder="예: 000웨딩홀 운영팀" value={form.name} onChange={handleChange} />
             </div>
             <div className="field">
               <label htmlFor="f-contact">연락처</label>
-              <input id="f-contact" name="contact" type="text" placeholder="이메일 또는 전화번호" value={form.contact} onChange={handleChange} />
+              <input id="f-contact" name="contact" type="text" required maxLength={120} placeholder="이메일 또는 전화번호" value={form.contact} onChange={handleChange} />
             </div>
             <div className="field">
               <label htmlFor="f-msg">전하고 싶은 결</label>
-              <textarea id="f-msg" name="message" placeholder="공간, 인원, 예정일 등 자유롭게 적어주세요." value={form.message} onChange={handleChange} />
+              <textarea id="f-msg" name="message" required maxLength={600} placeholder="공간, 인원, 예정일 등 자유롭게 적어주세요." value={form.message} onChange={handleChange} />
             </div>
-            <button className="submit-btn" type="submit">문의 보내기</button>
-            {submitted && <div className="form-success">문의가 접수되었습니다. (시안용 — 실제 전송 연동 필요)</div>}
+            <button className="submit-btn" type="submit" disabled={sending || submitted}>{sending ? '전송 중…' : submitted ? '전송 완료' : '문의 보내기'}</button>
+            </fieldset>
+            {submitted && <div className="form-success" role="status">문의가 접수되었습니다.</div>}
+            {error && <div role="alert" style={{ marginTop: 16, color: '#a03224' }}>{error}</div>}
           </form>
         </div>
       </section>

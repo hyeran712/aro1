@@ -1,0 +1,16 @@
+name = "aro-inquiry"
+main = "worker.mjs"
+compatibility_date = "2026-10-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://hyeran712.github.io"
+SITE_URL = "https://hyeran712.github.io/aro1/"
+
+[[kv_namespaces]]
+binding = "KAKAO_TOKENS"
+id = "08e65953ecb246d1af3b5012b3042ec7"
+
+[[ratelimits]]
+name = "INQUIRY_LIMITER"
+namespace_id = "1001"
+simple = { limit = 3, period = 60 }
