@@ -1,6 +1,6 @@
 # ARO Catering & Events
 
-**브랜드 소개부터 메뉴 탐색과 견적 문의까지 연결하는 케이터링 웹사이트**
+**브랜드 소개부터 메뉴 탐색, 견적 문의와 카카오톡 문의 알림까지 연결하는 케이터링 웹사이트**
 
 ‘아로새기다’에서 시작한 브랜드 ARO의 철학을 음식과 공간 이미지로 표현했습니다. React로 페이지를 구성하고 메뉴 필터, 행사 갤러리와 모바일 내비게이션을 구현했습니다.
 
@@ -20,6 +20,7 @@
 - 메뉴와 갤러리를 카테고리별로 탐색
 - FAQ와 진행 절차로 상담 전 궁금한 점 안내
 - 견적 문의 화면으로 상담 진입 경로 제공
+- 접수된 문의를 관리자 카카오톡으로 바로 전달
 
 ## 🎨 디자인 방향
 
@@ -52,6 +53,8 @@
 - FAQ 접기·펼치기
 - 모바일 메뉴 열기·닫기와 Escape 키 처리
 - 문의 입력 상태 관리와 네이버 지도 연결
+- 문의 접수 시 관리자 카카오톡 '나와의 채팅'으로 알림 전송 (Cloudflare Workers + Kakao REST API)
+- 카카오 전송이 확인된 뒤에만 '접수 완료' 표시, 실패 시 재시도 안내
 
 메뉴와 갤러리 수치는 화면의 콘텐츠 항목 수이며 실제 판매 상품 수나 행사 실적을 의미하지 않습니다.
 
@@ -98,27 +101,38 @@ const [menuOpen, setMenuOpen] = useState(false);
 
 ### 3. 문의 폼
 
-입력 상태를 관리하고 제출 시 안내를 표시합니다. 현재는 시안 동작으로 실제 전송 연동이 필요합니다.
+문의 내용을 Cloudflare Worker로 보내고, 카카오톡 전송이 확인되면 접수 완료를 표시합니다.
 
 ```jsx
-const handleChange = (e) => {
-  setForm({ ...form, [e.target.name]: e.target.value });
-};
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-  console.log("문의 제출:", form);
-  setSubmitted(true);
-};
+const response = await fetch(endpoint, {
+  method: 'POST', headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(form), signal: AbortSignal.timeout(20000),
+});
+const result = await response.json();
+if (!response.ok || result.ok !== true) throw new Error('send failed');
+setSubmitted(true);
 ```
 
 📄 [src/pages/Contact.jsx](src/pages/Contact.jsx)
+
+### 4. 카카오톡 문의 알림
+
+![카카오톡 문의 알림 작동 구조](docs/images/kakao-inquiry.png)
+
+- **서버 처리:** Cloudflare Workers가 요청 출처와 입력값을 검증하고, 같은 IP는 분당 약 3건으로 제한합니다.
+- **인증 · 토큰 관리:** 카카오 키는 Worker 비밀 설정에, 토큰은 Workers KV에 보관하고 액세스 토큰을 자동 갱신합니다.
+- **전송:** Kakao REST API의 '나에게 보내기'로 문의 내용을 관리자 카카오톡에 전달합니다.
+- **개인정보:** 문의 본문은 서버에 따로 저장하지 않습니다.
+
+📄 [server/kakao/worker.mjs](server/kakao/worker.mjs) · 설정 방법은 [server/kakao/README.md](server/kakao/README.md)
 
 ## 🛠 Tech Stack
 
 - **Frontend:** React 19, JavaScript, HTML, CSS
 - **Routing:** React Router DOM 7
 - **Build:** Create React App / react-scripts
+- **Backend:** Cloudflare Workers, Workers KV
+- **API:** Kakao REST API (카카오 로그인 · 카카오톡 메시지)
 - **Deployment:** GitHub Pages, gh-pages
 
 ## 🔎 구현 과정에서 고려한 점
@@ -130,7 +144,8 @@ const handleSubmit = (e) => {
 
 ## ⚠️ 현재 한계
 
-- 문의 폼의 서버 저장과 이메일 전송 미연동
+- 문의는 카카오톡 알림으로만 전달되며 별도 문의 목록·저장 기능은 없음
+- 장기간 문의가 없거나 토큰이 만료되면 카카오 계정 재연결 필요
 - 방문자 수와 문의 전환율 측정 자료 없음
 - 운영 전 연락처, 메뉴 조건과 이미지 사용 권한 확인 필요
 - 서비스의 운영 중·확장 예정 표현 정리 필요
@@ -138,7 +153,8 @@ const handleSubmit = (e) => {
 
 ## 🚀 향후 개선
 
-- 문의 입력 검증과 실제 접수 기능 연동
+- 스팸 방지를 위한 추가 검증(Turnstile 등) 도입
+- 관리자용 문의 목록 확인 기능
 - 메뉴와 갤러리 콘텐츠 관리 기능 추가
 - 메뉴 탐색과 문의 성공 이벤트 측정
 - 모바일 사용성과 키보드 접근성 점검
